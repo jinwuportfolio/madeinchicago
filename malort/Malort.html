@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jeppson's Malort</title>
+<style type="text/css">
+body {
+	margin: 1%; padding: 0;
+	width:100%;
+}
+
+#images {
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	max-width: 100%;
+}
+
+#images span img {
+	margin: 0;
+	font-size: 15px;
+	width: inherit;
+	position: absolute;
+	height: inherit;
+	width: 100%;
+	height: 100%;
+}
+
+
+#images span {
+	display: inline-block;
+	position: relative;
+}
+
+
+#images span img:hover {
+	box-shadow: 0px 0px 40px rgba(0,0,0,1);
+}
+
+h1 {
+	/*font-family: 'Alfa Slab One', cursive;*/
+	font-family: 'Philosopher', sans-serif;
+	text-align: center;
+	font-size: 5em;
+	color:white;
+}
+
+.text {
+	z-index:100;
+	position: relative;
+	margin-top: 300px;
+}
+
+body{ margin:0px;}
+#bg_container{ height:500px; overflow:hidden;}
+#bg{ 
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	z-index:-100;
+	overflow:hidden;
+}
+
+#main-text {
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+}
+
+.byline {
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	font-size: 1.2em;
+	color:white;
+}
+
+#summary {
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	font-size: 1.3em;
+	color:white;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#audio {
+	float: right;
+	margin-left: 10%;
+}
+
+#quiz {
+	height:400px;
+	background-color:gray;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+}
+
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jscript.js"></script>
+
+<!-- google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Philosopher:700' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="bg_container">
+	<video id="bg" src="video.mov" autoplay="true" loop="true" muted="true"></video>
+	<div class="text">
+	<h1>Chicago's Secret Liquor:</br>Jeppson's Mal<img src="scream.png" style="width:40px;padding-right:2px;">rt</h1>
+	<p class="byline">Text/Audio by Meg Anderson</p>
+	<p class="byline">Produced by Jin Wu</p>
+</br>
+
+	<p id="summary">    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt felis nisi, id volutpat massa pretium ut. Nam vel ipsum sit amet purus ornare lobortis. Nullam quis dolor tristique, condimentum sapien at, molestie ligula.</p>
+
+</div>
+</div>
+<div id="quiz">
+<h2>This is a QUIZ</h2>
+</div>
+
+<div id="main-text">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt felis nisi, id volutpat massa pretium ut. Nam vel ipsum sit amet purus ornare lobortis. Nullam quis dolor tristique, condimentum sapien at, molestie ligula. Aenean imperdiet turpis ac nisl sodales, sit amet consectetur mauris semper. Nulla nisl nibh, suscipit ac blandit rutrum, blandit et arcu. Vivamus sit amet condimentum arcu. Proin consequat ornare laoreet. Pellentesque sit amet sollicitudin odio.</p>
+
+<p>Aenean fermentum vel odio vel elementum. Aenean id neque at dui pulvinar mattis. Ut eu fermentum risus, et aliquam libero. Suspendisse feugiat, erat non venenatis imperdiet, ante nisl ultricies diam, sit amet consectetur mi urna eu erat. Nulla orci felis, facilisis sed tellus quis, dictum ornare dui. Fusce viverra ligula pharetra, rutrum ex a, gravida magna. Nam sollicitudin lorem sed placerat imperdiet. Duis feugiat magna augue, nec dictum libero porttitor et. Pellentesque rhoncus sapien id nibh sagittis ullamcorper.</p>
+
+<div id="audio"><iframe width="400px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/175627215&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
+
+<p>Etiam euismod, nunc vel efficitur pharetra, ipsum ante porta nisi, a venenatis diam neque dictum dolor. In id suscipit diam. Praesent vitae mattis justo, auctor pellentesque nisl. Sed interdum lorem at metus dapibus venenatis. Nunc sollicitudin tempus ligula, id vehicula augue sodales in. Pellentesque mauris eros, vestibulum a faucibus vitae, ultrices sed neque. Duis maximus vitae tellus ac suscipit. Fusce aliquet orci nibh, ac imperdiet urna efficitur id.</p>
+
+<p>Pellentesque pulvinar, purus eu laoreet placerat, nibh metus dictum nulla, at eleifend tellus orci eu eros. Donec malesuada magna id auctor consequat. Sed ornare dolor purus, vitae accumsan metus efficitur id. Aliquam convallis turpis mauris, a venenatis augue vehicula sit amet. Aenean tincidunt ante nisl, sed suscipit ligula eleifend bibendum. Aenean a arcu ut sem dapibus facilisis. Cras semper massa ac sapien blandit varius.</p>
+
+<p>Integer rhoncus mi a viverra convallis. Cras interdum porttitor orci, vel rutrum turpis pulvinar eu. Curabitur quis nunc ut nulla luctus.</p>
+
+<div id="timeline">
+<iframe src='//cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0AirFpxM5tj5XdENKbmRyNFFDOXRQUGhvUkd5ZWxEblE&font=Bevan-PotanoSans&maptype=toner&lang=en&height=650' width='100%' height='650' frameborder='0'></iframe>
+</div>
+
+
+</div>
+<div id="images">
+		<span id="i1"><img src="images/malort 1.jpg" alt="image-1" /></span>
+		<span id="i2"><img src="images/malort 2.jpg" alt="image-2" /></span>
+		<span id="i3"><img src="images/malort 3.jpg" alt="image-3" /></span>
+		<span id="i4"><img src="images/malort 4.jpg" alt="image-4" /></span>
+		<span id="i5"><img src="images/malort 5.jpg" alt="image-5" /></span>
+		<span id="i6"><img src="images/malort 6.jpg" alt="image-6" /></span>
+		<span id="i7"><img src="images/malort 7.jpg" alt="image-7" /></span>		
+		<span id="i8"><img src="images/malort 8.jpg" alt="image-8" /></span>		
+		<span id="i9"><img src="images/malort 9.jpg" alt="image-3" /></span>		
+		<span id="i10"><img src="images/malort 10.jpg" alt="image-1" /></span>	
+		<span id="i11"><img src="images/malort 11.jpg" alt="image-2" /></span>	
+		<span id="i12"><img src="images/malort 12.jpg" alt="image-12" /></span>	
+		<span id="i13"><img src="images/malort 13.jpg" alt="image-4" /></span>	
+		<span id="i14"><img src="images/malort 14.jpg" alt="image-3" /></span>	
+		<span id="i15"><img src="images/malort 15.jpg" alt="image-5" /></span>	
+		<span id="i16"><img src="images/malort 16.jpg" alt="image-6" /></span>	
+		<span id="i17"><img src="images/malort 17.jpg" alt="image-5" /></span>	
+		<span id="i18"><img src="images/malort 18.jpg" alt="image-8" /></span>	
+		<span id="i19"><img src="images/malort 19.jpg" alt="image-6" /></span>	
+		<span id="i20"><img src="images/malort 20.jpg" alt="image-10" /></span>		
+</div>
+	
+
+</body>
+</html>
