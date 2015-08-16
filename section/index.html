@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Made in Chicago - Section</title>
+		<!-- <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+		<script src="js/modernizr.custom.js"></script>
+
+		<style>
+		body {
+			font-family: 'Lato', sans-serif;
+			color: #b3b9bf;
+		}
+
+		#thumbnails {
+			width:75%;
+			float:right;
+		}
+
+		.section {
+			padding: 3% 0 3% 0;
+			max-width: 1300px;
+			margin: 0 auto;
+			list-style: none;
+			text-align: center;
+		}
+
+		.section li {
+			display: inline-block;
+			width: 500px;
+			height:350px;
+			margin: 0;
+			padding: 0.1px;
+			text-align: left;
+			position: relative;
+		}
+
+		.section figure {
+			margin: 0;
+			position: relative;
+		}
+
+		.section figure img {
+			max-width: 100%;
+			display: block;
+			position: relative;
+			z-index:-1;
+		}
+
+		.section figcaption {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px;
+			background: #808080;
+			color: #ed4e6e;
+		}
+
+		.section figcaption h3 {
+			margin-top: 0;
+			padding: 0;
+			color: #fff;
+		}
+
+		.section figcaption span:before {
+			content: 'by ';
+		}
+
+		.section figcaption a {
+			text-align: center;
+			padding: 5px 5px;
+			border-radius: 2px;
+			display: inline-block;
+			background: #ed4e6e;
+			color: #fff;
+		}
+
+		/* Caption Style */
+		.category figcaption {
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			text-align: center;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+			-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+
+		.no-touch .category figure:hover figcaption,
+		.category  figure.cs-hover figcaption {
+			opacity: 1;
+			-webkit-transform: translate(15px, 15px);
+			-moz-transform: translate(15px, 15px);
+			-ms-transform: translate(15px, 15px);
+			transform: translate(15px, 15px);
+		}
+
+		.category  figcaption h3 {
+			margin-top: 40px;
+			font-size: 2em;
+		}
+
+		.category  figcaption span {
+			display: block;
+		}
+
+		.category  figcaption a {
+			margin-top: 15px;
+		}
+
+.mobile {
+	display: none;
+	}
+
+		@media screen and (max-width: 31.5em) {
+			.section {
+				padding: 3% 3% 3% 3%;
+			}
+			.section li {
+				width: 100%;
+				min-width: 300px;
+			}
+		}
+@media (max-width: 768px) {
+	.mobile {
+		display: block;
+		}
+	.nonmobile {
+		display: none;
+		}
+	img {
+		width: 100%;
+		}
+	h2 {
+		width: 75%;
+		font-size: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		}
+	h2 a {
+		color: #be170e;
+		}
+	figure {
+		margin-left: none;
+		margin-right: none;
+		}	
+	article {
+		margin-top: 0;
+		margin-bottom: 5em;
+		}	
+	#about {
+		margin-top: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		margin-bottom: 3em;
+		}
+	}
+
+		*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+		a {
+			color: #888;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+
+		a:hover,
+		a:active {
+			color: #333;
+		}
+
+		#left {
+			width:20%;
+			float:left;
+			margin-top: 15%;
+		}
+
+		#left img {
+			width:100%;
+			margin-left: 20%;
+
+		}
+
+		#summary {
+			text-align: center;
+			margin-left: 40%;
+		}
+
+		.ghost-button {
+			margin-left: 55%;
+			font-size: 1em;
+			  display:block;
+			  width: 150px;
+			  padding: 3px;
+			  margin:0 auto 0 auto;
+			  color: black;
+			  text-align: center;
+			  outline: none;
+			  border-radius: 10px;
+			  text-decoration: none;
+			  border: 3px solid black;
+			  opacity: 0.7;
+			  -webkit-opacity: 0.7;
+			  -moz-opacity: 0.7;
+			  transition: 0.5s ease;
+			  -webkit-transition: 0.5s ease;
+			  -moz-transition: 0.5s ease;
+			  /*transition: border-color 0.3s ease-out,
+		              color 0.3s ease-out;*/
+			}
+
+			.ghost-button:hover,
+			.ghost-button:active {
+			  /*color: #C30017;
+			  border-color: #C30017;*/
+			  color: black;
+			  text-decoration: none;
+			  /*transition: border-color 0.5s ease-in,
+			              color 0.5s ease-in;*/
+			  -webkit-transform: scale(1.3,1.3);
+			  -moz-transform:scale(1.3,1.3);
+			  opacity: 1;
+			  -webkit-opacity: 1;
+			  -moz-opacity: 1;
+			}
+
+		</style>
+	</head>
+	<body>
+<section class="nonmobile">
+<div id="left">
+	<img id="logo" src="image/logo-01.png">
+	<div id="summary">
+	<p>Made in Chicago is a collaborative reporting project produced by Northwestern University journalism graduate students.</p>
+</br></br></br>
+	<a href="http://www.medillnews847.com/madeinchicago/about/index.html" style="font-size:1em;border-radius:7px;border:solid grey;padding:3%;">ABOUT</a>
+</div>
+
+	<!-- <a class="ghost-button" href="#"><span>ABOUT</span></a> -->
+</div>
+
+		<div class="container" id="thumbnails">	
+			
+			<ul class="section category">
+				<li>
+					<figure>
+						<img src="image/created.png" alt="img01">
+						<figcaption>
+							<h3>CREATED</h3>
+							<a href="http://www.medillnews847.com/madeinchicago/malort/index.html">Jeppson's Malort: A search for the origins of Chicago's liquor</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/string/index.html">Violin-Making Tunes A Global Beat From Chicago</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/ysvp/index.html">Citadels of Hope: YMCA outreach workers in Chicago</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/fdla/index.html">First Defense Legal Aid: Chicago lawyers</br> give free counsel in free time</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="image/built.png" alt="img02">
+						<figcaption>
+							<h3>BUILT</h3>
+							<a href="http://www.medillnews847.com/madeinchicago/petroperil/index.html">Petrol Peril</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/bungalow/index.html">Bungalow: Chicago bungalow says welcome home for over a century</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/littlepuertorico/index.html">Puerto Rican Restaurateur finds 'American Dream' in Chicago</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="image/PNW-13.jpg" alt="img04">
+						<figcaption>
+							<h3>GROWN</h3>
+							<a href="http://www.medillnews847.com/madeinchicago/cps/index.html">Chicago Public Schools: Financial Woes</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/pilsen/index.html">Pilsen: Green Dreams, Industrial Roots</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/10thward/index.html">Political newcomer defeats the mayor</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="image/enact.png" alt="img05">
+						<figcaption>
+							<h3>ENACTED</h3>
+							<a href="http://www.medillnews847.com/madeinchicago/burge/index.html">Black lives tortured: Chicago awards reparations</br> to survivors of Burge police torture</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/midwife/index.html">Midwives: Medical Societies </br>Overshadow Growing Home  birth Movement</a></br>
+							<a href="http://www.medillnews847.com/madeinchicago/abortion/index.html">Abortion Escorts</a>
+						</figcaption>
+					</figure>
+				</li>
+				
+			</ul>
+		</div><!-- /container -->
+</section>
+<section class="mobile">
+	<figure>
+		<img src="image/logo-01.png" alt="logo" />
+	</figure>
+	<article>
+		<figure>
+			<img src="image/createdMobile.jpg" alt="Created" />
+		</figure>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/malort/index.html">Jeppson's Malort: A search for the origins of Chicago's liquor</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/string/index.html">Violin-Making Tunes A Global Beat From Chicago</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/ysvp/index.html">Citadels of Hope: YMCA outreach workers in Chicago</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/fdla/index.html">First Defense Legal Aid: Chicago lawyers give free counsel in free time</a></h2>
+	</article>
+		<article>
+		<figure>
+			<img src="image/builtMobile.jpg" alt="Created" />
+		</figure>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/petroperil/index.html">Petrol Peril</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/bungalow/index.html">Bungalow: Chicago bungalow says welcome home for over a century</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/littlepuertorico/index.html">Puerto Rican Restaurateur finds 'American Dream' in Chicago</a></h2>
+	</article>
+	<article>
+		<figure>
+			<img src="image/grownMobile.jpg" alt="Created" />
+		</figure>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/cps/index.html">Chicago Public Schools: Financial Woes</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/pilsen/index.html">Pilsen: Green Dreams, Industrial Roots</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/10thward/index.html">Political newcomer defeats the mayor</a></h2>
+	</article>
+	<article>
+		<figure>
+			<img src="image/enactedMobile.jpg" alt="Created" />
+		</figure>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/burge/index.html">Black lives tortured: Chicago awards reparations</br> to survivors of Burge police torture</a></br></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/midwife/index.html">Midwives: Medical Societies </br>Overshadow Growing Home  birth Movement</a></h2>
+		<h2><a href="http://www.medillnews847.com/madeinchicago/abortion/index.html">Abortion Escorts</a></h2>
+	</article>
+	<article>
+	<p>Made in Chicago is a collaborative reporting project produced by Northwestern University journalism graduate students.</p>
+	<div id="about">
+		<a href="http://www.medillnews847.com/madeinchicago/about/index.html" style="font-size:1em;border-radius:7px;border:solid grey;padding:3%;">ABOUT</a>
+	</div>
+</section>
+		<script src="js/toucheffects.js"></script>
+	</body>
+</html>

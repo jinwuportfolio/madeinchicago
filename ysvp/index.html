@@ -1,0 +1,824 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+	<!-- CSS Stylesheets -->
+	<link href="bootstrap.min.css" rel="stylesheet" />
+	<link href="SlickNav/slicknav.css" rel="stylesheet" />
+	<link href="nav.css" rel="stylesheet" /><!-- Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet" type="text/css" /><!-- Scripts --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="SlickNav/jquery.slicknav.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script src="jquery.waypoints.min.js"></script><script src="skrollr.js"></script>
+	<title>Citadels of Hope</title>
+	<style type="text/css">article {
+	width: 100%;
+	}
+p {
+	line-height: 150%;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	font-size: 1.2em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	margin-bottom: 1em;
+	padding-left: 3%;
+	}
+p a {
+	color: #be170e;
+	text-decoration: none;
+	font-size: 1em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	line-height: 150%;
+	}
+p a:hover {
+	text-decoration: underline;
+	}
+h1 {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #be170e;
+	font-size: 2em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin-bottom: .5em;
+	padding-left: 3%;
+	}
+h3 {
+	font-size: 1em;
+	line-height: 80%;
+	}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+	}
+audio {
+	padding: 2%;
+	}
+nav {
+	transition: all, 2s, ease, 1s;
+	}
+figure {
+	margin-bottom: 3em;
+	padding-bottom: 0;
+	}
+figcaption {
+	color: #969490;
+	margin-left: 2%;
+	margin-top: 0;
+	}
+.dropCap {
+	font-size: 3.2em;
+	float: left;
+	line-height: 92%;
+	padding-right: .3%;
+	color: #be170e;
+	font-weight: 800;
+	}
+.colorChange {
+	transition: all 1s ease;
+}
+
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+#headline {
+	font-family: 'Sanchez', serif;
+	font-size: 5em;
+	color: #D5E9F2;
+	width: 60%;
+	z-index: 10000;
+	text-align: center;
+	background-color: rgb(0, 0, 0);
+	background-color: rbga(0, 0, 0, 0.3);
+	padding: 0.5em;
+	}
+.hide {
+	display: none;
+	}
+.profile {
+	margin-bottom: 20em;
+	}
+#byline {
+	text-align: right;
+	width: 100%;
+	padding-right: 5%;
+	}
+/* Skrollr CSS */
+.bcg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.hsContainer {
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+	overflow: hidden;
+	position: relative;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.hsContent {
+	position: absolute;
+	left: 0;
+	top: 20em;
+}
+	.hsContent h2  {
+		color: #fff8de;
+		background-color: rgba(0,0,0,0.5);
+		padding: 10px 5px;
+		font-size: 35px;
+		line-height: 38px;
+		margin-bottom: 12px;
+	}
+	.hsContent p {
+		width: 400px;
+		color: #b2b2b2;
+		background-color: rgba(0,0,0,0.5);
+		padding: 10px 5px;
+		font-size: 2.5em;
+	}
+	.hsContent a {
+		color: #b2b2b2;
+		text-decoration: underline;
+	}
+.icon {
+	width: 15%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	}
+#mobile {
+	display: none;
+	}
+
+/*Slide 1*/ 
+#slide-1 {
+    background-image:url('photos/cover.jpg');
+}
+/* Slide 2*/
+#slide-2 {
+	background-image:url('photos/Animation-6.jpg');
+	}
+#slide-2 p {
+	margin-left: 50%;
+	width: 40%;
+	}
+/* Slide 3 */
+#slide-3 {
+	background-image:url('photos/Animation-1.jpg');
+	}
+#slide-3 p {
+	margin-left: 50%;
+	}
+/* Slide 4 */
+#slide-4 {
+	background-image:url('photos/Animation-3.jpg');
+	}
+#slide-4 p {
+	margin-left: 50%;
+	width: 40%;
+	}
+/* Slide 5 */
+#slide-5 {
+		background-image:url('photos/Animation-8.jpg');
+	}
+#slide-5 p {
+	margin-left: 10%;
+	width: 45%;
+	font-size: 2em;
+	}
+/* Slide 6 */
+#slide-6 {
+		background-image:url('photos/Animation-4.jpg');
+	}
+#slide-6 p {
+	margin-left: 50%;
+	}
+
+@media (max-width: 1050px) {
+	#mobile {
+		display: block;
+		}
+	#nonmobile {
+		display: none;
+		}
+	p {
+	width: 70%;
+	}
+	}
+	</style>
+</head>
+<body id="skrollr-body">
+<header>
+<nav class="hide" id="nonmobileNav">
+<ul>
+	<li><a href="http://medillnews847.com/madeinchicago/string/index.html">Previous Story</a></li>
+	<li><a class="logo" href="http://medillnews847.com/madeinchicago/section/index.html"><img alt="logo" src="logo-01.png" /> </a></li>
+	<li><a href="http://medillnews847.com/madeinchicago/fdla/index.html">Next Story</a></li>
+</ul>
+</nav>
+
+<nav id="mobileNav">
+<ul id="menu">
+	<li><a href="http://medillnews847.com/madeinchicago/section/index.html">Home</a></li>
+	<li><a href="http://medillnews847.com/madeinchicago/fdla/index.html">Next Story</a></li>
+	<li><a href="http://medillnews847.com/madeinchicago/string/index.html">Previous Story</a></li>
+</ul>
+</nav>
+</header>
+
+<section><!--Intro-->
+<article id="nonmobile">
+<section class="homeSlide bcg" data-anchor-target="#slide-1" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" id="slide-1">
+<div class="hsContainer">
+<div class="hsContent">
+<h1 id="headline">Citadels of Hope: YMCA outreach workers in Chicago</h1>
+<img class="icon" src="downArrow.png" /></div>
+</div>
+</section>
+
+<section class="homeSlide bcg" id="slide-2">
+<div class="hsContainer" id="intro-2">
+<div class="hsContent">
+<p>There are two maps of Chicago. The one most of us see shows streets and neighborhoods. The other is an invisible web of gang territories that cover much of the city. For many youth in Chicago, it&#39;s only the second one that matters.</p>
+</div>
+</div>
+</section>
+
+<section class="homeSlide bcg" id="slide-3">
+<div class="hsContainer">
+<div class="hsContent" id="intro-3">
+<p>Mike Almore was out getting ice cream when he got the call.</p>
+</div>
+</div>
+</section>
+
+<section class="homeSlide bcg" id="slide-4">
+<div class="hsContainer">
+<div class="hsContent">
+<p>A youth in the YMCA&#39;s Youth Safety and Violence Prevention program (YSVP) was in trouble. Fernando needed to get his passport from the post office which meant venturing into a rival gang&#39;s territory.</p>
+</div>
+</div>
+</section>
+
+<section class="homeSlideTall bcg" id="slide-5">
+<div class="hsContainer">
+<div class="hsContent">
+<p>He&#39;d covered up his facial tattoo, which could give him away as an opposition gang member, with a Band-Aid. Even still, he had seen teenagers he didn&#39;t know come out of a gangway, look at him and then disappear. Fernando was certain they were going to get more guys or a gun.</p>
+
+<p>(<em>Photo illustration</em>)</p>
+</div>
+</div>
+</section>
+
+<section class="homeSlide bcg" id="slide-6">
+<div class="hsContainer">
+<div class="hsContent">
+<p>He hoped Mike could get him out of the neighborhood before the boys returned.</p>
+</div>
+</div>
+</section>
+</article>
+
+<article id="byline">
+<h3>Reported and written by: Adriana Cargill</h3>
+
+<h3>Produced by: Kate Morrissey</h3>
+</article>
+
+<article id="mobile">
+<h1>Citadels of Hope: YMCA outreach workers in Chicago</h1>
+
+<p>There are two maps of Chicago. The one most of us see shows streets and neighborhoods. The other is an invisible web of gang territories that cover much of the city. For many youth in Chicago, it&#39;s only the second one that matters.</p>
+
+<p>Mike Almore was out getting ice cream when he got the call.</p>
+
+<p>A youth in the YMCA&#39;s Youth Safety and Violence Prevention Program (YSVP) was in trouble. Fernando needed to get his passport from the post office which meant venturing into a rival gang&#39;s territory.</p>
+
+<p>He&#39;d covered up his facial tattoo, which could give him away as an opposition gang member, with a Band-Aid. Even still, he had seen teenagers he didn&#39;t know come out of a gangway, look at him and then disappear. Fernando was certain they were going to get more guys or a gun.</p>
+
+<p>He hoped Mike could get him out of the neighborhood before the boys returned.</p>
+</article>
+<!-- Blurb about org in general-->
+
+<article class="profile">
+<h1>Youth Safety and Violence Prevention Outreach Workers</h1>
+
+<p><span class="dropCap">T</span>his is not a job for the faint of heart. Mike Almore, John Vergara and Bobby Acuna are three outreach workers who wake up every day to work with youth who live and struggle to survive in violent communities. Community violence is often thought of as gang violence, but it also includes: sexual violence, domestic abuse, bullying, shootings in public places or anything that creates &quot;warlike&quot; conditions and psychological trauma.</p>
+
+<p>In 2011, Chicago had an estimated 100,000 gang members in more than 70 gangs, making the Windy City the most gang-infested city in the country according to the Chicago Crime Commission&#39;s Gang Book released in 2012. The Chicago Police Department recovered an average of more than 13,000 guns a year in 2006, 2007, 2008,&nbsp;more than New York and Los Angeles <em>combined</em> for those same years, according to the same report. In 2012, Chicago had the highest murder rate in the nation, and has been in the top three cities with the most homicides since 1985, according to <a href="http://www.pewresearch.org/fact-tank/2014/07/14/despite-recent-shootings-chicago-nowhere-near-u-s-murder-capital/" target="_blank">Pew Research Center</a>.</p>
+
+<p>The <a href="http://www.ymcachicago.org/southside/programs/youth-safety-and-violence-prevention/" target="_blank">YMCA&#39;s Youth Safety and Violence Prevention Program</a>,&nbsp;YSVP, headquartered in Pilsen, uses a holistic approach to violence prevention. The YSVP team believes that youth who are repeatedly exposed to traumatic stress are at risk for developing coping mechanisms like drug use, self-harm and gang involvement. They work with boys and girls ages 12-18 who come from low-income households predominantly from Chicago&#39;s South and West sides.</p>
+
+<figure><img alt="YMCA building in Pilsen" class="colorChange grayscale" src="photos/YMCA-1.jpg" /> <figcaption>YSVP offices at 21st Place and South Ashland Avenue in Pilsen where a holistic approach to violence prevention is practiced. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>The YSVP has a staff of 21, along with an army of interns and veterans who carry out this mission. The&nbsp;different programs use a combination of peace circles, mentoring, parent teen cafes, art and sports programing to reach the youth.</p>
+
+<p>What makes Almore, Vergara and Acuna able to positively impact the youth they work with is complicated. To do it successfully, they need to be not only dedicated and intuitive, but also resilient in the face of adversity. Youth expressed overwhelmingly how important it is to them that they can relate with these mentors. They&#39;re from the same or similar neighborhoods as the kids they work with. They have an intimate and often personal understanding of the challenges these youths face. They&#39;ve struggled with many of the same challenges: being born to poor families, going to poor schools, living in very poor communities, where many of their friends overdose, are murdered, join gangs or go to prison. Women in these communities often have children at a very young age, continuing the cycle.</p>
+
+<p>The YSVP Co-Executive Director Eddie Bocanegra says that sometimes people just lose hope.</p>
+
+<p>&quot;I think my best staff members here are the people who have suffered the most,&quot; Bocanegra says. &quot;The question I have is what did they do with that suffering? That&#39;s where they&#39;ve found much of their resiliency; in their own suffering. In the midst of those ashes they have come out of all that hardship to do this type of work.&quot;</p>
+
+<p>Bocanegra believes that Almore, Vergara and Acuna embody a deep sense of hope. It&#39;s not just about relating and empathizing with these youth; it&#39;s their extraordinary resilience and drive in the face of adversity. Rather than drag the sins of their former lives like a ball and chain, they have chosen to take those same traumas and use them as weights to strengthen the communities they work in. They are citadels of hope.</p>
+
+<p>Before the suspicious boys could return, Mike picked up Fernando and brought him back to the YMCA. The building has tinted windows so people passing by on the street can&#39;t see whose inside. It&#39;s doors are locked 24/7. This is a safe haven where youth from many different gangs can come and the YSVP has worked very hard to maintain that neutrality in the eyes of the gangs.</p>
+
+<p>Mike says in the past, he has been in similar situations where he&#39;s had to run for his life. At other times, he&#39;s had to negotiate with gang leaders to release his youth or call in a favor with his contacts in the gang world. This is just an everyday part of the job for these outreach workers.</p>
+
+<p>Later that day, he drove Fernando home safely.</p>
+</article>
+<!--Mike profile-->
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" id="Mike1audio" src="photos/Mike-1.jpg" /> <figcaption>At the YSVP headquarters, if you ask for Mike no one will know who you are talking about. If you ask for &quot;Big Mike&quot; they will direct you to Mike Almore. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="Mike1"><source src="audio/mike1.ogg" /> <source src="audio/mike1.mp3" /> You browser does not support the audio element.</audio>
+
+<article class="profile">
+<h1>Mike Almore</h1>
+
+<p><span class="dropCap">M</span>ike Almore watches them toss the worn football back and forth across the Queen of Heaven Cemetery grounds. It&#39;s just outside of Chicago, and it&#39;s hot for a late spring morning. There&#39;s a cool breeze rolling in with a hint of rain on its tail. Mike sees a crowd gathering around one of the many graves. He walks over to find Danny staring down at the grave; his eyes tracing the lettering of his own first and last name. The man buried here is his father, who died of an overdose on Dec 29, 2011 when Danny was just 13 years old. That was four years ago and Danny hasn&#39;t been back to the cemetery since.</p>
+
+<p>Jaime&#39;s a close family member of Danny and he comes over to look at the grave. Danny, Jaime and the group of boys with them are part of the Urban Warriors program. It&#39;s a program under YSVP that pairs post-9/11 veterans with youth who have already been exposed to the kind of violence that most people only see in wartime photos. According to the Co-Executive Director Eddie Bocanegra, it&#39;s the only program in the country where youth and veterans come together to focus on the impact of trauma.</p>
+
+<p>The boys continued to play football in the cemetery as if they weren&#39;t there. And maybe that&#39;s because in their everyday lives they&#39;re closer to this place than they want to admit. Almost all the teenagers in Urban Warriors know a close friend or family member who is already under the ground.</p>
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" src="photos/Mike-2.jpg" /> <figcaption>A crowd gathered around Danny&#39;s father&#39;s grave. From left to right: Social Worker Edwin Martinez (with glasses), Jaime (black shirt with blue jeans) Danny (gray shirt), Co-Executive Director Eddie Bocanegra (maroon shirt), and Mike Almore (navy blue shirt). (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>&quot;We&#39;re trying to do some tertiary intervention, some prevention,&quot; Mike says. &quot;I just wanna catch them before they get to the cemetery.&quot;</p>
+
+<p>Mike has been an outreach worker at the YSVP for just under a year, but before that he worked in a graveyard for about seven years. He quickly became desensitized to death, preferring not to know anything about the people he was burying&nbsp; until the day came when he buried someone and nobody came to the burial ceremony. Nobody came in the following days or weeks either to bring flowers or visit the grave.</p>
+
+<p>&quot;I felt real bad, we die alone as it is; but to be forgotten or neglected, to have nobody give a f--- about you,&quot; Mike said, &quot;is terrible.&quot;</p>
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" id="Mike2audio" src="photos/Mike-4.jpg" /> <figcaption>Mike Almore at the barbecue after the graveyard trip singing along to classic House music hits from his youth. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="Mike2"><source src="audio/mike2.ogg" /> <source src="audio/mike2.mp3" /> You browser does not support the audio element.</audio>
+
+<p>So he started counting the people he buried; about six to seven bodies a day, five days a week for almost seven years. He also tried to find out something about their lives.</p>
+
+<p>Mike&#39;s experiences working in a graveyard didn&#39;t kill his sense of humor. He cracks jokes all the time. He&#39;d return home from work at the cemetery and his girlfriend would ask &quot;how was work today?&quot; &quot;Dead&quot; he would reply or &quot;people are dying to get in where I work!&quot; Even though he liked how peaceful it was working there, he felt like he was meant to do something else. While still at the graveyard he began mentoring Jaime.</p>
+
+<p>Mike, 42, lives in the six-flat apartment building in Pilsen where he was born and raised. His family owns the building and he remembers when Jaime and his mom moved into one of the apartments. He described him as a nerdy kid with thick black rimmed glasses and disheveled thick black hair in need of a cut. Kids in the neighborhood used to bully him. His older brother joined a gang and later overdosed. Little by little, Jaime started hanging out with a rough crowd. Mike tried to warn him, telling him about his own experiences in a gang and his brother Caid Almore&#39;s story.</p>
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" id="Mike3audio" src="photos/Mike-5.jpg" /> <figcaption>Mike Almore can&#39;t sit on his steps without people stopping and chatting with him. Pictured here with his father, Almore is well-known in his native Pilsen neighborhood. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="Mike3"><source src="audio/mike3.ogg" /> <source src="audio/mike3.mp3" /> You browser does not support the audio element.</audio>
+
+<p>Mike describes Caid as a &quot;hardcore gangbanger&quot; who lived &quot;hard&quot; and had a reputation for bravado. For the three years before his murder, the family slept on pins and needles. When they would hear a siren or an ambulance go by in the middle of the night, they&#39;d wake up thinking &quot;is that Caid?&quot; and if it slowed down Mike would get out of bed to see if it was him. Then one day in 2004 the phone call came. It was five in the morning and Mike just let the phone ring. His girlfriend urged him to pick it up saying it &quot;might be important.&quot;</p>
+
+<p>He told her he already knew who it was. After the phone stopped ringing he listened to the voice mail; it was his older brother Brooks Dino Almore telling him to call him immediately.</p>
+
+<p>&quot;Hello?&quot; said Dino.</p>
+
+<p>&quot;How is he?&quot; said Mike.</p>
+
+<p>&quot;He&#39;s dead,&quot; Dino said. Mike dropped the phone and started crying.</p>
+
+<p>And the worst part was their mother didn&#39;t know yet. Mike asked himself, &quot;How do you tell your mother her son&#39;s dead?&quot; Caid had been found shot to death in between two cars in the street a few blocks from their house. Dino and Mike went over to their mother&#39;s apartment to deliver the heartbreaking news.</p>
+
+<p>&quot;When I heard my mom howl like that, it was from the gut... I never want to hear anybody&#39;s mom cry like that again, nobody&#39;s mom should have to cry like the way my mom cried for her son.&quot;</p>
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" id="Mike4audio" src="photos/Mike-6.jpg" /> <figcaption>Sitting at a bus stop, Mike Almore looks down on the spot in the street where his brother Caid Almore was murdered around eight years ago. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="Mike4"><source src="audio/mike4.ogg" /> <source src="audio/mike4.mp3" /> You browser does not support the audio element.</audio>
+
+<p>Mike says preventing other mothers from going through what his mom did is a large part of why he works as an outreach worker. Another part of him also feels guilty for Caid&#39;s death. He thinks he and his older brother, Dino, set a bad example by both joining gangs. Caid was a little brother following in his big brother&#39;s footsteps.</p>
+
+<p>Mike joined a gang when was about 13 years old. Five years later, he was standing watch at about 1 in the morning on Racine Avenue. He was leaning on a stop sign when he heard a shot ring out and then a &quot;ping!&quot; as the bullet hit the pole. Mike says he actually saw another bullet come past his head and hit the pole and then ricochet the other way. He dropped to the ground and after the shooting stopped he got up and wiped himself off. Back on his feet he was shaking, thinking to himself: &quot;that could have been it.&quot;</p>
+
+<p>At 6 feet&nbsp;3 inches&nbsp;and 250 pounds, Mike was a large target leaning on a thin pole. He believes to this day that it was divine intervention that saved his life. God was trying to tell him he was meant to do more than live the street life. That night he made up his mind to leave the gang. It&#39;s a common practice that if you quit a gang you get what&#39;s called a &#39;violation.&#39; In Mike&#39;s case, he could have chosen among shooting someone, paying a large sum of money or being beaten by everyone in the gang without being allowed to defend himself. He chose the beating. Because he was a loyal gang member, it only lasted 2 minutes. Often, beatings last the length of time it takes for a cigarette to burn down - which can be eternity.</p>
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" src="photos/MikeYoung.jpg" /> <figcaption>Mike Almore, at age18. He has been an outreach worker at the YSVP for just under a year, but before that he worked in a graveyard for about seven years. Photo courtesy Mike Almore.</figcaption></figure>
+
+<p>&quot;At this age, he took those stories as something he wanted to experience himself. And that&#39;s part of the danger of actually sharing some of these stories with the youth,&quot; Mike said with a sigh. Outreach workers often share their personal stories to relate with their youth and teach them what not to do. But despite Mike&#39;s discouragement, Jaime has joined a gang. Youth join gangs for many different and often complex reasons, making it hard to determine what &#39;turns&#39; them (as it&#39;s called when someone joins a gang), Mike says.</p>
+
+<p>Jaime&#39;s mother, was so upset she used to walk the streets late at night looking for him. Mike has since persuaded her to stop by telling her it&#39;s dangerous to be on the streets that late and that she won&#39;t find him. Even worse, she might see something she shouldn&#39;t, which could endanger her and Jaime.</p>
+
+<p>Now she stays home.</p>
+
+<p>Mike sometimes gets calls late at night from parents of youth in the program who can&#39;t find their kids. Sometimes the youth themselves will call and ask him to pick them up if it&#39;s an emergency. For Mike, this work is redemption for his own past. He took a pay cut to be able to work with kids full-time.</p>
+
+<p>&quot;I&#39;m mostly doing it because I have a lot of regrets from back then and if I could save someone, one kid not to have some of these regrets, then I&#39;ll die happy.&quot;</p>
+
+<p>Until kids in 8 to&nbsp;10 years come back and tell him that they&#39;ve made the right choices because of him, he will continue to think he hasn&#39;t done enough, he says. Mike used to go where his brother was murdered and read to him every year on his birthday. But recently he has stopped going. He says if he keeps going to that place then Caid&#39;s spirit will keep coming back there too, and Mike wants him to be free.</p>
+
+<figure><img alt="Mike Almore" class="colorChange grayscale" src="photos/Mike-7.jpg" /> <figcaption>Danny, Mike Almore and Jaime walk to meet the group after a scavenger hunt in the graveyard to find different types of graves. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>Amid the tombstones the mood of the group has become palpably more somber. The football is nowhere to be found. The boys&#39; faces are sullen and they&#39;re nervously shifting back and forth, avoiding eye contact with the veterans and outreach workers. The group is reflecting on how they cope with grief and loss. They&#39;ve also been asked to think about how they want to be remembered when they die. It starts to sprinkle big drops of rain that burst when they hit the graves. Eddie says the way he copes with his grief and honors those he has lost is by working with youth.</p>
+
+<p>Some 45 percent of homicides in Chicago are related to gang altercations or narcotics according to <a href="http://crimelab.uchicago.edu/page/report" target="_blank">a University of Chicago Crime Lab report</a>. In the report, 90 percent of all homicide offenders and nearly three-quarters of homicide victims have prior arrest records suggesting involvement with gangs, drugs or other illegal activities. Mike got Jaime into the Urban Warrior program but now his mother says she&#39;s sending him to live with her sister in Florida for a month or two. Now that Jaime&#39;s in a gang, his chances of suffering the same fate as Caid Almore have increased considerably.</p>
+
+<p>It will soon be summer on Chicago&#39;s South Side, a time <a href="http://www.chicagomag.com/Chicago-Magazine/The-312/March-2012/Heat-and-Crime-Its-Not-Just-You-Feeling-It/" target="_blank">notorious for increased gun violence</a>.</p>
+</article>
+<!--Bobby profile-->
+
+<figure><img alt="Bobby Acuna" class="colorChange grayscale" id="Bobby1audio" src="photos/bobby-1.jpg" /> <figcaption>Bobby Acuna getting ready for Victory Outreach City Church&#39;s Sunday service. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="Bobby1"><source src="audio/Bobby1.ogg" /> <source src="audio/Bobby1.mp3" /> You browser does not support the audio element.</audio>
+
+<article class="profile">
+<h1>Bobby Acuna</h1>
+
+<p><span class="dropCap">B</span>obby Acuna&#39;s hands are folded in prayer. His face is freshly shaven, peaceful and calm as Pastor Steve Drapala recites a prayer before the service begins. He and the other three ministers are nestled between a set of lockers in the long hallway of Richard T. Crane Medical Preparatory High School on Chicago&#39;s Near West Side. Victory Outreach International is an Evangelical Pentecostal church that holds a Sunday service here every week. Bobby&#39;s eyes are closed and his bald head is tilted downwards. Under the fluorescent light you can plainly see the giant old English letters spelling &#39;I E&#39; tattooed on the back of his head. The &#39;I E&#39; or &quot;Inland Empire&quot; refers to San Bernardino County in Southern California where he was a gang member for 29 years.</p>
+
+<p>When the prayer is over, the ministers jump into action and split in different directions to take their places. Bobby walks briskly into the vast gymnasium and as he turns the corner an explosion of singing and light erupt from the ad hoc church. In between the basketball hoops, there are rows of folding chairs, a stage with royal blue satin backdrop and a translucent pulpit. Men and women onstage are singing &quot;Healer, Savior risen from the grave your name is Jesus.&quot; The song blasts out of a massive sound system in the back of the room.</p>
+
+<p>Victory Outreach evangelizes to the world&#39;s prostitutes, convicts, drug addicts and gang members. The church&nbsp; tries to help those whom many in society has given up on. Bobby feels at home here, surrounded by people with similar pasts. At the end of the service the evangelist will infuse members of the congregation with the Holy Spirit and send them unconscious and convulsing to the floor.</p>
+
+<figure><img alt="Bobby Acuna" class="colorChange grayscale" src="photos/bobby-2.jpg" /> <figcaption>Left to right: Bobby Acuna, a visiting evangelist from Ghana, Pastor Steve Drapala and Alex Martinez. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>For the moment, Bobby takes his place in the front and immediately raises his hands and begins to sing. He&#39;s dressed sharply in a black suit with a paisley maroon tie and shiny leather shoes. Shortly after the service begins, Daniel Rios sits down next to Bobby. At 15 years old, he&#39;s a pinch taller than his mentor but his rosy cheeks give him away as a teenager.</p>
+
+<p>Before Daniel met Bobby he said his mentors were gang members in the streets. He says his dad isn&#39;t really there for him because he drinks a lot and is always with his friends. Daniel was referred to the YMCA by his school because of behavioral issues. When Daniel first met Bobby, he didn&#39;t know what to make of him.</p>
+
+<p>&quot;He was telling me he was a man of God, but it was kind of confusing when he had all those tattoos on him,&quot; Daniel said. &quot;I never seen a man with so many tattoos at a church.&quot;</p>
+
+<p>Daniel is from Little Village and, at 14, he had never been downtown; he hadn&#39;t even left his neighborhood. To do that, he would have had to cross into rival gang territory. Although Daniel has never been in a gang, he knew he would be unprotected if he ventured into neighborhoods where the gangs didn&#39;t know him. At 15 years old, he took his first trip downtown in the YSVP van. He went to Navy Pier, rode the Ferris wheel and went into the house of mirrors. He says it was &quot;pretty fun.&quot;</p>
+
+<p>Daniel volunteers at church helping with security because it makes him feel more a part of the community. Bobby encourages him, and he&#39;s always there if Daniel needs him. Daniel says he never used to think about the future, but since Bobby became part of his life he sees himself being a leader and wants to be the CEO of a company someday.</p>
+
+<figure><img alt="Bobby Acuna" class="colorChange grayscale" src="photos/bobby-3.jpg" /> <figcaption>Bobby Acuna standing next to Daniel and singing during Victory Outreach&#39;s Sunday service. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>Co-Executive Director Eddie Bocanegra says that more than 200 people applied for Bobby&#39;s position. But Bobby was by far the most impressive. He&#39;s been at the YMCA since September 2014. Eddie says he&#39;s an &quot;all-star&quot; and that some of the kids who have already completed the program continue to seek Bobby out as their mentor long after they have graduated. Eddie says what Bobby lacks in formal education (he doesn&#39;t have high school degree), he makes up for with his unique set of skills. He&#39;s able to help youth navigate through the challenges they face such as gangs life, substance abuse, domestic violence, or street violence better than any Ph.D. could ever do, Eddie says.</p>
+
+<p>At 48 years old, Bobby&#39;s life now is in stark contrast to the story of his past he tells. When he was in fourth grade, he says his mother&#39;s brother, Alberto Rodriguez, tried to kill his father, Jesus Cruz Acuna, to stop him from beating Bobby&#39;s mother. One night, Rodriguez shot his father twice in the back and left him for dead. But Bobby&#39;s dad got up and instead of going to the hospital, he went to the bar, Bobby says. That night, Bobby slept in the church parking lot with his mom and six siblings. The next morning they moved to Barstow, California, where he says he grew up angry and fatherless.</p>
+
+<p>At 10 he joined a gang. At 15, he says he was sentenced to a year in the Optimist Home For Boys in Los Angeles for the first time. The charge was inciting mayhem after he and a few friends drunkenly beat and repeatedly stabbed another youth. They chose their victim at random; Bobby had just gotten his first switchblade knife that day, and he was eager to use it.</p>
+
+<figure><img alt="Bobby Acuna" class="colorChange grayscale" id="Bobby2audio" src="photos/BobbyYoung.png" /> <figcaption>Bobby Acuna at 35 years old in Soledad State Prison in California with his mother Cecilia Hernandez. Photo courtesy Bobby Acuna.</figcaption></figure>
+
+<audio controls="" id="Bobby2"><source src="audio/Bobby2.ogg" /> <source src="audio/Bobby2.mp3" /> You browser does not support the audio element.</audio>
+
+<p>When Bobby was young, he didn&#39;t have a positive mentor like Daniel has now. Instead, he looked up to his uncle, David Rodriguez, a gang member who taught him the ways of the streets. At 23, he says all he knew was how to gangbang. He lived a life of drugs, women and violence; but he was still angry and bitter. He was miserable and blamed his uncle David for making him that way. By 2004, he was on the High Desert&#39;s Most Wanted list by the California Department of Corrections.</p>
+
+<p>Bobby&#39;s transformative moment came in Chino State Prison when he was 39 years old. Bobby describes the moment this way:</p>
+
+<p>Bobby and a fellow inmate were sent to a two-man cell after fighting in the mess hall. He and the other inmate were friends but from different gangs. In that cellblock, the guards pass by every hour. As soon as the guards passed, it became clear to Bobby that his cellmate was going to attack him.</p>
+
+<p>The whole tier of the cellblock knew what was about to happen and as was customary they began to sing &#39;happy birthday&#39; really loud to cover up any screams for help during the fight. The assault was no surprise to Bobby, who had known tensions were boiling up against him within the gang world.</p>
+
+<p>The assault was fast and brutal. When the guards came by an hour later the cell was covered in blood and Bobby had his assailant pinned to the ground. After the guards took them both from the cell, Bobby was sent back with a mop and bucket to clean the blood off the walls and floors.</p>
+
+<p>It was a dark time in his in life; he had become disillusioned with the gang life and power struggles within the gang world left him unable to trust his friends or even his wife. He realized if he had killed his assailant, he would&#39;ve spent life in prison for murder, even though he was just defending himself; surviving. He felt so frustrated and alone.</p>
+
+<p>It was in this moment that Bobby decided he&#39;d had enough.</p>
+
+<figure><img alt="Bobby Acuna" class="colorChange grayscale" src="photos/bobby-5.jpg" /> <figcaption>Bobby Acuna is working in his office at the YSVP headquarters in Pilsen. The &#39;RIP Miklo&#39; painting behind him was made by some of his youth whose friend Miklo was recently killed. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>After he was released from prison in 2007, he knew he couldn&#39;t just start life over after 29 years in the gang. He needed help. So he decided to spend a year at Victory Outreach&#39;s Christian Recovery Home in Helendale, California. It&#39;s a men&#39;s rehabilitative center where they attend services and study the Bible every day. He accepted Jesus Christ as his personal Savior and decided to devote his life to spreading the word of God.</p>
+
+<p>Pastor Rick Alanis recognized Bobby&#39;s passion for their church and expertise with gang members as assets for the church&#39;s expansion in Chicago. It&#39;s extremely difficult and often dangerous for an outsider to come into a gang&#39;s territory and gain permission from the gang&#39;s leaders to work with neighborhood youth. But Bobby did it. Bobby arrived in Little Village in September 2011 intending to stay only three months. He&#39;s been here over three years now, and he says he just couldn&#39;t desert the youth he met.</p>
+
+<p>After a while Eddie began to hear about a guy from California who&#39;d moved to Little Village and was preaching to gang members in the neighbhorhood. Eventually, they met, and Eddie spent a few years watching Bobby&#39;s devotion to helping youth. &quot;When I spoke to him, I could sense that there was conviction,&quot; Eddie said. &quot;There was atonement.&quot;</p>
+
+<p>Bobby was engaged to be married in California but delayed the wedding because he felt he had found his calling to work with youth. Almost four years passed before he got married in May 2015. After their wedding, his wife moved to Chicago. Bobby lives for his youth. He makes himself available 24 hours a day seven days a week for them. Bobby doesn&#39;t hide from his past, nor does he wear it as a badge of honor.</p>
+
+<figure><img alt="Bobby Acuna" class="colorChange grayscale" id="Bobby3audio" src="photos/bobby-6h.jpg" /> <figcaption>Bobby Acuna began working with Daniel when he was hired at the YSVP in September 2014. Acuna has continued to mentor Daniel even after he graduated the program. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="Bobby3"><source src="audio/Bobby3.ogg" /> <source src="audio/Bobby3.mp3" /> You browser does not support the audio element.</audio>
+
+<p>Sometimes he thinks about his own eight children; all but his 16-year-old son Adrian Acuna are adults now. When he spends time with the YSVP youth he wonders what it would have been like to be there for them in the way he is for the youth he works with now. In those days, he was in prison or on the corner instead of being with them. Today, Daniel goes to Church with Bobby and Adrian every week.</p>
+
+<p>Daniel says Bobby has brought hope to his life. He and his brother joined the church and now they&#39;re bringing their friends to the YMCA. When asked what lesson Daniel has learned from Bobby, he replied without hesitation: <em>You&#39;re never alone</em>.</p>
+</article>
+<!--John profile-->
+
+<figure><img alt="John Vergara" class="colorChange grayscale" id="John1audio" src="photos/John-1.jpg" /> <figcaption>John Vergara, who has Puerto Rican roots, in front of a mural of his &quot;Paseo Boricua&quot; flag for Humboldt Park. Each town in Puerto Rico has it&#39;s own flag and in 2009 Vergara decided to create one for his neighborhood. The flag is very popular in the community and can be seen flying everywhere. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="John1"><source src="audio/John1.ogg" /> <source src="audio/John1.mp3" /> You browser does not support the audio element.</audio>
+
+<article class="profile">
+<h1>John Vergara</h1>
+
+<p><span class="dropCap">J</span>ohn Vergara wakes up thinking about art. He goes to sleep thinking about art. On Tuesday and Thursday evenings he runs an art class for youth in YSVP and today the teens are running about an hour late.</p>
+
+<p>Three boys arrive earlier than the rest and they help him get the classroom ready by grabbing paints and brushes from the storage cabinet. They&#39;re antsy and impatient, endlessly munching on chips and snacks John keeps stocked in his office. Jashua, a 14-year-old with big, warm eyes and a smile that will surely break some hearts, wears a Bulls hat cocked up and a purple Northwestern University hoodie with a silver chain poking out. When the other kids arrive you can hear them halfway down the hall, bursting with energy. They&#39;re eight-graders in their final weeks of middle school. But when John talks, they listen.</p>
+
+<figure><img alt="John Vergara" class="colorChange grayscale" i="" src="photos/John-4.jpg" /> <figcaption>John Vergara teaches the kids how to paint a waterfall using new brush techniques. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>John, 42, is a big man, about 6&#39;4&quot; and 300 pounds, with tattoos covering most of his chest, stomach, back, arms and neck. Most of his tattoos are relics of his 20-something years in a gang in his native Humboldt Park neighborhood. He used to have tear drops on his face and lettering on his knuckles. But he&#39;s begun to remove them because he says they no longer represent who he is.</p>
+
+<p>At about 9 years old, he witnessed his first murder. He describes the moment like this: It was a warm evening, maybe 8 o&#39;clock, and he, a friend and a cousin around his age were walking past the intersection of Le Moyne Street and Lawndale Avenue. He saw an older, tall, skinny white boy whose nickname was Stoner.</p>
+
+<p>&quot;Hey, Stoner, be careful,&quot; John called out. Stoner had on Chuck Taylor&#39;s with pink and black laces, the colors of his gang. But he was in opposition territory. John lingered a moment and watched Stoner walk away from him underneath the train bridge. Suddenly he heard shots ring out; and saw the silhouette of someone standing on top of the bridge. This particular stretch of railroad tracks was infamous in the 1980s. It was known as &quot;Sniper&#39;s highway&quot; because of the number of shootings that occurred there.</p>
+
+<p>John saw Stoner drop to the ground and he ran over with his companions. One of them tried to turn Stoner on his side, but as he did his jaw fell off into the growing pool of blood, John recalls. John didn&#39;t get close to him, he felt sick to his stomach.</p>
+
+<p>John says he&#39;s sure it messed him up a little but &quot;Death was just a part of life. What&#39;s that phrase? You live by the sword, you die by the sword,&quot; he says.</p>
+
+<figure><img alt="John Vergara" class="colorChange grayscale" src="photos/John-2.jpg" /> <figcaption>The exact spot under the train bridge near Le Moyne Street and Lawndale Avenue where Stoner was murdered. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>Almost everyone John knew growing up was in a gang. At 14, he had already used a TEC-9 semi-automatic submachine gun and was a full-fledged gang member. He says his gang used to have guys with guns on the roofs of buildings protecting their territory while other gang members sold drugs like cocaine, marijuana or wikisticks (joints dipped in embalming fluid). He&#39;s been shot four times, and one of those bullets is still in his right wrist, wedged just underneath his skin.</p>
+
+<p>John ended up in and out of prison for most of his life&nbsp; but, through it all John still created art. &quot;Drawing kept me alive, that&#39;s how I survived in there [jail] and that&#39;s how I survived out here.&quot;</p>
+
+<p>When he was released in 2005, he was still in the gang. It didn&#39;t happen in a single moment but a gradual realization had been taking hold over months and years. He didn&#39;t want to spend more time in prison. He was sick of sleeping with one eye open. He was sick of looking over his shoulder wherever he went and living his life around gang borders. He had a son and he wanted to raise him right, so he didn&#39;t the same mistakes his dad had made. And he didn&#39;t want to see any more death. John had had enough tragedy and pain.</p>
+
+<p>He decided to quit the gang. He had to isolate himself from almost everyone he had ever known at 32 years old.</p>
+
+<figure><img alt="John Vergara" class="colorChange grayscale" id="John2audio" src="photos/JohnYoung.jpg" /> <figcaption>John Vergara at 26 years old celebrates at new year&#39;s party in 2000. Photo courtesy John Vergara.</figcaption></figure>
+
+<audio controls="" id="John2"><source src="audio/John2.ogg" /> <source src="audio/John2.mp3" /> You browser does not support the audio element.</audio>
+
+<p>He says it was tough for him to get a job because of his criminal record and his gang tattoos. He began selling his drawings to make ends meet. Through sheer determination, little by little he started making more money with his art and creating a new life for himself. John takes pride that around the neighborhood, instead of being known as &quot;John the ex-gang member&quot; he&#39;s known as &quot;John the artist.&quot;</p>
+
+<p>Today, John has a book of obituaries, with 78 names in total, of friends and family he&#39;s lost. Most of them have been killed to gang violence. The book&#39;s full, but he couldn&#39;t bear to start another one so just stopped collecting obituaries. His nails are chewed way past the tips of his fingers, halfway up their beds. It&#39;s one clue as to how heavy all this death weighs on him.</p>
+
+<p>He&#39;s now a well-known muralist and a familiar artist in the galleries around the city. Eddie Bocanegra first saw John&#39;s artwork at Northeastern University when he was taking an evening class. Eddie was immediately struck by John&#39;s talent. A security guard at the university put them in touch. The two stayed in contact and when a position opened, Eddie hired him at the YSVP in October 2014.</p>
+
+<p>John&#39;s main objective as an outreach worker is mentoring and case management but Eddie says they&#39;re fortunate to be able to leverage his set of art skills to engage their kids more creatively.</p>
+
+<p>John has since started an art program at the McCormick Tribune YMCA in Logan Square. He spends a lot of time with the kids making art but in the process he tries to teach them life skills and prevent them for making the same mistakes he did. When John talks they listen.</p>
+
+<figure><img alt="John Vergara" class="colorChange grayscale" src="photos/John-3h.jpg" /> <figcaption>Jashua smiles and jokes with friends during art class at the McCormick Tribune YMCA in Logan Square. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>&quot;He tells us to do better, like when we&#39;re driving he shows us like some kids that be standing on the corner; I don&#39;t want to come out like all those other people,&quot; Jashua says. &quot;Why would I want to risk my life for something dumb?&quot;</p>
+
+<p>Many of the kids John works with are from the same neighborhood where he grew up and now face many of the challenges he did&mdash;violence, substance abuse and poverty. Jashua hangs out on the same block, Maplewood and Division streets, that John did when he was in a gang. But he&#39;s mostly there because his best friend, who is also in John&#39;s art class, lives there. He wants to go to college and become a chef or a lawyer. Kids in his program say they can relate to John because he was once in their shoes and they trust his advice because he&#39;s already lived the gang life.</p>
+
+<p>Jashua says he used to hang out with the wrong crowd when he was younger. At about 8 years old, he witnessed his first murder&mdash;about the same age as John was.</p>
+
+<p>He knew that crowd through his cousin, who is now in prison. He says he doesn&#39;t want to end up in jail because he heard the food is bad, which would be tough on any aspiring chef.</p>
+
+<figure><img alt="John Vergara" class="colorChange grayscale" src="photos/John-7.jpg" /> <figcaption>John Vergara points out a bullet that is still lodged in his wrist. (Adriana Cargill/Medill)</figcaption></figure>
+
+<p>&quot;Most of the time he&#39;s there, sometimes he&#39;s, like, busy with the YMCA stuff, he don&#39;t pick up but he&#39;ll text. Or call back,&quot; Jashua says. Jashua&#39;s father isn&#39;t in his life. &quot;I&#39;ve never had a role model in my life so...he is one,&quot; he says squirming in his chair and blushing with a big smile.</p>
+
+<p>John says the kids in his art program know there are consequences to their decisions, and some of them are going to have to learn from their own mistakes like he did. But if he can help it, they won&#39;t make the same mistakes he did.</p>
+
+<p>&quot;It makes me feel good, it&#39;s hard to explain. It&#39;s like, that&#39;s what was missing from my life working it kids... . I get to teach them right and wrong.&quot; John says. &quot;I get to mentor these kids and watch them grow and it&#39;s a lot of fun.&quot;</p>
+
+<p>John says he finally found his life&#39;s calling: helping people and doing art. But he often goes home from work feeling drained and exhausted. It&#39;s not because he&#39;s physically working hard, but because sometimes hearing the kids&#39; stories is really hard for him.</p>
+
+<p>&quot;Yeah, I take it home with me because a lot of things that they say, I&#39;ve been through and it&#39;s like damn; it kind of hits home. I remember going through that, seeing my mother being abused, my friend get shot, etc.&quot; It&#39;s a constant reminder of his past.</p>
+
+<figure><img alt="John Vergara" class="colorChange grayscale" id="John3audio" src="photos/John-6.jpg" /> <figcaption>John Vergara in his office at the McCormick Tribune YMCA getting organized for the next days work. (Adriana Cargill/Medill)</figcaption></figure>
+
+<audio controls="" id="John3"><source src="audio/John3.ogg" /> <source src="audio/John3.mp3" /> You browser does not support the audio element.</audio>
+
+<p>To cope, he often gets a coffee by himself or listens to music in an effort to clear his mind. But most of the time he just gets out his sketchbook and draws or paints.</p>
+
+<p>As he erases the gang art tattooed to his body, he says it&#39;s starting to make him a little sad. He&#39;s afraid the memories that these tattoos represent will fade with them. But he is coming to peace with that.</p>
+
+<p>He will still wake up thinking about art.</p>
+</article>
+</section>
+<!--Nav Scripts--><script>
+ 			$(document).ready(function() {
+				var stickyNavTop = $('nav').offset().top;
+ 
+				var stickyNav = function(){
+				var scrollTop = $(window).scrollTop();
+      
+			if (scrollTop > stickyNavTop) { 
+    			$('nav').addClass('sticky');
+				} else {
+    				$('nav').removeClass('sticky'); 
+					}
+				};
+ 
+			stickyNav();
+ 
+			$(window).scroll(function() {
+ 	   		stickyNav();
+			});
+			});
+
+ 
+    	</script><script type="text/javascript">
+			$(document).ready(function(){
+				$('#menu').slicknav();
+				});
+		</script><!--Photo Scripts--><script>
+			$(document).ready(function() {
+	
+				$('.grayscale').waypoint(function(direction) {
+					$(this.element).removeClass('grayscale');
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	
+				);
+
+				});
+		</script><!--Audio scripts--><script>
+			$(document).ready(function() {
+				var audio = $("#Mike1")[0];
+				$('#Mike1audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#Mike2")[0];
+				$('#Mike2audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#Mike3")[0];
+				$('#Mike3audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#Mike4")[0];
+				$('#Mike4audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#Bobby1")[0];
+				$('#Bobby1audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#Bobby2")[0];
+				$('#Bobby2audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#Bobby3")[0];
+				$('#Bobby3audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#John1")[0];
+				$('#John1audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#John2")[0];
+				$('#John2audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><script>
+			$(document).ready(function() {
+				var audio = $("#John3")[0];
+				$('#John3audio').waypoint(function(direction) {
+					audio.play();
+					this.disable();
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	 					
+ 	 					);
+ 	 					
+ 	 				
+				});
+		</script><!--Intro scripts--><script>
+( function( $ ) {
+	
+	// Setup variables
+	$window = $(window);
+	$slide = $('.homeSlide');
+	$slideTall = $('.homeSlideTall');
+	$slideTall2 = $('.homeSlideTall2');
+	$body = $('body');
+	
+    //FadeIn all sections   
+	$body.imagesLoaded( function() {
+		setTimeout(function() {
+		      
+		      // Resize sections
+		      adjustWindow();
+		      
+		      // Fade in sections
+			  $body.removeClass('loading').addClass('loaded');
+			  
+		}, 800);
+	});
+	
+	function adjustWindow(){
+		
+		// Init Skrollr
+		var s = skrollr.init({
+		    render: function(data) {
+		    
+		        //Debugging - Log the current scroll position.
+		        //console.log(data.curTop);
+		    }
+		});
+		
+		// Get window size
+	    winH = $window.height();
+	    
+	    // Keep minimum height 550
+	    if(winH <= 550) {
+			winH = 550;
+		} 
+	    
+	    // Resize our slides
+	    $slide.height(winH);
+	    $slideTall.height(winH*2);
+	    $slideTall2.height(winH*3);
+	    
+	    // Refresh Skrollr after resizing our sections
+	    s.refresh($('.homeSlide'));
+	    
+	}
+		
+} )( jQuery );
+		</script><script>
+			$(document).ready(function() {
+	
+				$('#slide-6').waypoint(function(direction) {
+					$('nav').removeClass('hide');
+ 	 					}, {
+ 	 						'offset': '50%'
+ 	 					}
+ 	
+				);
+
+				});
+		</script></body>
+</html>

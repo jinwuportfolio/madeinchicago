@@ -1,0 +1,44 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 2%;
+    width:80%;
+}
+
+a, a:link {
+    text-decoration: none;
+    font-weight: 700;
+    color:#BD4932;
+}
+
+a:hover {
+    color:#105B63;
+}
+
+.calloutbox {
+	font-style: italic;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-top:7%;
+    margin-bottom: 7%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.credit {
+    text-align: center;
+    font-style: italic;
+    color:#7e7e7e;
+    font-size: 0.85em;
+}
+
+img {
+    width:100%;
+}

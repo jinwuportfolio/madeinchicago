@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" /><!-- CSS Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="SlickNav/slicknav.css" rel="stylesheet" />
+	<link href="css/nav.css" rel="stylesheet" /><!-- For Vertical Timeline -->
+	<link href="css/reset.css" rel="stylesheet" /><!-- CSS reset -->
+	<link href="css/style.css" rel="stylesheet" /><!-- Resource style --><!-- Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Neuton" rel="stylesheet" type="text/css" /><!-- Scripts --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="SlickNav/jquery.slicknav.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script src="js/modernizr.js"></script><!-- Modernizr --><!-- -->
+	<title>Midwives</title>
+	<style media="screen" type="text/css">html, body {
+		width:100%;
+		height:100%;
+		font-family:"Lato",Helvetica,Arial,sans-serif;
+		color:black;
+	}
+
+	body { 
+	   background: -webkit-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* Chrome 10+, Saf5.1+ */
+	  background:    -moz-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* FF3.6+ */
+	  background:     -ms-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* IE10 */
+	  background:      -o-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* Opera 11.10+ */
+	  background:         linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* W3C */
+	  background-repeat: no-repeat;
+		}	
+
+	#headline {
+		max-width: 1050px;
+		margin:4em auto 0 auto;			
+		border-radius:20px;
+        padding:1%;
+        background-color: #ffffff;
+        border: .5px solid #d3d3d3;
+        opacity:0.6;
+        font-family: "Neuton";
+	}
+
+	#headline h1 {
+		color:black;
+		font-size:3.5em;
+		font-weight: 900;
+		text-align: center;
+		font-family: "Neuton";
+	}
+
+	#head {
+		font-size:2em;
+		font-family: "Neuton";
+		text-align:center;
+		margin: 1% 30% 0 30%;
+		background-color: #ffffff;
+        border: .5px solid #d3d3d3;
+        opacity:0.6;
+        border-radius:20px;
+        padding:1% 1% 0 1%;
+	}
+
+	#start::first-letter {
+		font-size:200%;
+		opacity:1;
+	}
+
+	section {
+		width:700px;
+		margin:2em auto 0 auto;		
+	}
+
+	section p {
+		font-size:1.3em;
+		font-family: "Lato";
+		text-align: left;
+		line-height: 1.5;
+		opacity:.9;
+	}
+
+	/*#first:first-letter { float: left; color: #903; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: "Lato"; }*/
+
+	section h2 {
+		font-size:2em;
+		font-family: "Lato";
+		margin:3% auto 2% auto;
+	}
+
+	h3 {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 2%;
+	}
+
+	/* Bird Animation */
+	#bird {
+	max-width: 512px;
+	height: auto; 
+    position: relative;
+    margin:0;
+    left:0px;
+    -webkit-transition: left 5000ms;
+    -moz-transition: left 5000ms;
+    -ms-transition: left 5000ms;
+    -o-transition: left 5000ms;
+    transition: left 5000ms;
+	}
+
+	#animation:hover img {
+	    left:60%;
+	}
+
+	#home {
+		float:right;
+		margin: 8% 5% 0 0;
+		max-width: 320px;
+	}
+
+　　 #interactive {
+        text-align:center;
+　　　　　margin:0;
+        padding:0;
+    }
+    #interactive figure {
+        text-align:center;
+        max-width:50%;
+        margin:0 auto;
+        }
+
+	#interactive li {
+		list-style:none;
+        display:inline-block;
+        text-align:center;
+		margin: 0 auto 2% 10%;
+        padding:0;
+	}
+
+	.midwives:hover{
+		opacity:.5;
+	}
+
+	figcaption {
+		text-align: center;
+	}
+
+	#explanation {
+		max-width: 50%;
+		height:auto;
+		margin:0 auto 0 auto;			
+		border-radius:20px;
+        padding:1%;
+        background-color: #ffffff;
+        border: .5px solid #d3d3d3;
+        opacity:0.7;
+	}
+
+	#explanation p {
+		font-size:1.5em;
+		font-weight: 500;
+		text-align: justify;
+		font-family:"Helvetica Neue"; 
+	}
+
+	/*Vertical timeline*/
+	#cd-timeline {
+	  position: relative;
+	  padding: 2em 6em;
+	  margin: 2em auto 2em auto;
+	  border-radius:10px;
+	  background: -webkit-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* Chrome 10+, Saf5.1+ */
+	  background:    -moz-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* FF3.6+ */
+	  background:     -ms-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* IE10 */
+	  background:      -o-linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* Opera 11.10+ */
+	  background:         linear-gradient(90deg, #003973 10%, #E5E5BE 90%); /* W3C */  
+	}
+	#cd-timeline::before {
+	  /* this is the vertical line */
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  height: 100%;
+	  width: 4px;
+	  background: #d7e4ed;
+	}
+
+	.cssanimations .cd-timeline-img.is-hidden {
+	  visibility: hidden;
+	}
+	.cssanimations .cd-timeline-img.bounce-in {
+	  visibility: visible;
+	  animation: cd-bounce-1 0.6s;
+	}
+	 
+	@keyframes cd-bounce-1 {
+	  0% {
+	    opacity: 0;
+	    transform: scale(0.5);
+	  }
+	 
+	  60% {
+	    opacity: 1;
+	    transform: scale(1.2);
+	  }
+	 
+	  100% {
+	    transform: scale(1);
+	  }
+	}
+
+	.cd-date {
+		font-size:300%;
+	}
+
+	.Numbers {
+		width:100%;
+		height:20%;
+		background-color: #ecf0f1;
+		margin-top: 2em;
+		padding-top:1em;
+		text-align: center;
+	}
+
+	.parallax-window {
+	   
+	    background: transparent;	
+  		height:100%;
+  		position:relative;
+  	
+	}
+
+	.container1 {
+		margin:0 auto 0 auto;
+		padding:0;
+	}
+	</style>
+	<style type="text/css">
+	</style>
+	<style type="text/css">#wikiwand-ext-switch-button {
+      position:fixed;
+      bottom:-100px;
+      right:10px;
+      width:227px;
+      height:48px;
+      z-index:200000;
+      cursor:pointer;
+  }
+
+  .wikiwand-ext-switch-button-RTL {
+      right:auto !important;
+      left:60px;
+  }
+  #wikiwand-ext-switch-link {
+      cursor:pointer;
+  }
+  #wikiwand-ext-loading {
+      position:fixed;
+      width:120px;
+      height:120px;
+      margin-left:-60px;
+      margin-top:-60px;
+      top:50%;
+      left:50%;
+      z-index:100000;
+      opacity:0;
+  }
+;
+	</style>
+</head>
+<body style="">
+<header>
+<nav id="nonmobileNav">
+<ul>
+	<li><a href="http://www.medillnews847.com/madeinchicago/burge/index.html">Previous Story</a></li>
+	<li><a class="logo" href="http://medillnews847.com/madeinchicago/section/index.html"><img alt="logo" src="logo-01.png" /> </a></li>
+	<li><a href="http://www.medillnews847.com/madeinchicago/abortion/index.html">Next Story</a></li>
+</ul>
+</nav>
+
+<nav id="mobileNav">
+<ul id="menu">
+	<li><a href="http://medillnews847.com/madeinchicago/section/index.html">Home</a></li>
+	<li><a href="http://www.medillnews847.com/madeinchicago/abortion/index.html">Next Story</a></li>
+	<li><a href="http://www.medillnews847.com/madeinchicago/burge/index.html">Previous Story</a></li>
+</ul>
+</nav>
+</header>
+
+<div id="headline">
+<h1>MEDICAL SOCIETIES OVERSHADOW<br />
+GROWING HOME BIRTH MOVEMENT</h1>
+
+<h3>Written by Meredith Wilson / Produced by Yasufumi Saito</h3>
+</div>
+
+<div id="animation"><img alt="" id="bird" src="img/sparrow-carrying-a-baby.png" /> <img id="home" src="img/home.png" /></div>
+
+<section>
+<p id="start">Midwives say that llinois is one of the hardest places in the United States to have a home birth.</p>
+&nbsp;
+
+<p>States across the country have been expanding access to home birth by licensing certified professional midwives to practice, but the Illinois legislature has routinely voted down bills that would regulate CPMs in this state.</p>
+&nbsp;
+
+<p>Midwife advocacy groups and legislators have been presenting bills and resolutions to license CPMs to the General Assembly every year since 2001. The latest bill, submitted in 2013, included new restrictions on how CPMs would be allowed to practice, but it is currently buried in the Rules Committee.</p>
+&nbsp;
+
+<p>Advocates for home birth say the influence of several major medical groups in Chicago is holding up home birth access laws.</p>
+&nbsp;
+
+<p>Chicago is home to the American Medical Association, the Illinois State Medical Society PAC and the American Academy of Pediatrics. It&#39;s also the birthplace of the American Congress of Obstetricians and Gynecologists.</p>
+&nbsp;
+
+<h2>POWER OF MEDICAL SOCIETIES</h2>
+
+<p>The AMA has over 200,000 members and is the largest association of medical professionals and students in the country. It employs 41 lobbyists and has not spent less that $12 million on lobbying efforts since 1998. The American Academy of Pediatrics spent over $320,000 on lobbyists in 2014; ACOG spent almost $1.7 million.</p>
+</section>
+<!-- Parallax scrolling effect -->
+
+<div class="parallax-window" data-image-src="img/mom.jpg" data-parallax="scroll"></div>
+
+<p style="text-align:center">Rachel Dolan Wickersham holds her daughter, Caitie, after a successful home birth in 1995. (Photo courtesy of Rachel Wickersham)</p>
+
+<section>
+<p>Rachel Dolan Wickersham, president of the Coalition for Illinois Midwifery, has spent 18 years fighting for midwifery access laws. Wickersham is a licensed midwife in Wisconsin and works as a doula, or a birthing coach, in Illinois. As an advocate, she has seen lawmakers convinced by a doctor&rsquo;s story of a bad homebirth over arguments from midwife groups.</p>
+&nbsp;
+
+<p>&ldquo;Physicians have high status in our society. If there&rsquo;s an underground midwife testifying versus a physician, it&rsquo;s not surprising that the physician with the status is going to be believed.&rdquo;</p>
+&nbsp;
+
+<p>Lobbyists representing the Illinois State Medical Society and ACOG come to Springfield representing ACOG policy on certified professional midwives, said Wickersham.</p>
+&nbsp;
+
+<p>&ldquo;For the very longest time, ACOG was saying, &lsquo;Home birth is not safe. Home birth is not safe. Home birth is not safe,&rdquo; she said. In 2008, ACOG issued <a href="http://www.medscape.com/viewarticle/725383">a statement</a> that &ldquo;reiterates its long-standing opposition to home births.&rdquo;</p>
+&nbsp;
+
+<p>The AMA issued a resolution in 2008 supporting ACOG&rsquo;s statement that the safest setting for birth is in a hospital or birthing center within a hospital complex.</p>
+&nbsp;
+
+<p>While the opinions of medical societies are not legally binding, they often hold enormous sway over lawmakers.</p>
+&nbsp;
+
+<p>&ldquo;Some of them [legislators] are influenced by the statements that the American Academy of Pediatrics and the Illinois Medical Society made. They think it&rsquo;s almost child abuse to deliver a baby at home,&rdquo; said House Representative Robyn Gabel. Gabel was a sponsor of the Home Birth Safety Act, which would have licensed CPMs to practice.</p>
+</section>
+<!-- Interactive Map -->
+
+<h1 id="head">Certified Professional Midwives Legal Status By State</h1>
+
+<div id="container1" style="position: relative; width: 100%; height: 40%;"></div>
+
+<p style="text-align:center">Source: Midwives Alliance North America</p>
+
+<section>
+<p>Illinois is one of only seven states that directly prohibit certified professional midwives from practicing. Home births aren&rsquo;t illegal, but they need to be attended by a certified nurse midwife or a physician. CPMs, unlike CNMs, do not have a nursing degree. Instead, they are licensed after several years of apprenticeship with a midwife and a competency test given by North American Registry of Midwives.</p>
+&nbsp;
+
+<h2>LIMITED ACCESS</h2>
+
+<p>Home birth advocates say that women will continue to have home births for religious, cultural or philosophical reasons regardless of whether their midwife is certified or not. They argue that regulation of CPMs would make it safer for women who were going to give birth at home no matter what.</p>
+&nbsp;
+
+<p>Carrie Vickery, who is on the board of directors of Illinois Friends of Midwives, said that it&rsquo;s gotten harder for women to find midwives in the past few years.</p>
+&nbsp;
+
+<p>&ldquo;I&rsquo;ve had mothers come to me and ask &lsquo;how do I find a midwife? Who do I talk to? How do I get my foot in the door?...I&rsquo;ve had mothers expressly say that if they can&rsquo;t find a midwife, they plan to have an unassisted home birth. For anyone outside of the Chicago area, options are extremely limited,&rdquo; Vickery said.</p>
+&nbsp;
+
+<p>There are only six practices in Illinois that offer legal home birth options, and only two serve families in southern Illinois.</p>
+&nbsp;
+
+<p>Even where home birth options are available, there are often not enough medical professionals to meet the demand. The current law says that a CNM must have a collaborative agreement with a physician before attending a home birth. A collaborative agreement allows for an easier transition to a hospital setting should the need arise.</p>
+&nbsp;
+
+<p>However, so few doctors are willing to sign the collaborative agreement that many CNMs end up only being able to work in hospitals, according to Wickersham. She cites malpractice insurance and the Scope of Practice Partnership, a coalition organized by the AMA and other medical groups to limit the expansion of non-physicians&rsquo; practices into areas that were previously restricted to physicians, as motivators to for physicians not to sign collaborative agreements with midwives.</p>
+</section>
+<!-- Interactive graphic -->
+
+<h1 id="head">What&#39;s the difference?</h1>
+
+<ul id="interactive">
+	<li>
+	<figure><img alt="" class="midwives" id="CNM" src="img/midwife.png" style="cursor: pointer;" /> <figcaption>
+	<p>Certified Nurse-Midwife</p>
+	</figcaption></figure>
+	</li>
+	<li>
+	<figure><img alt="" class="midwives" id="CPM" src="img/midwife.png" style="cursor: pointer;" /> <figcaption>
+	<p>Certified Professional Midwife</p>
+	</figcaption></figure>
+	</li>
+</ul>
+
+<div id="explanation">
+<p id="CNMEX" style="display:none;">&ldquo;Certified nurse-midwives are registered nurses who have graduated from a nurse-midwifery education program accredited by the Accreditation Commission for Midwifery Education (ACME) (formerly the American College of Nurse-Midwives (ACNM) Division of Accreditation (DOA)) and have passed a national certification examination to receive the professional designation of certified nurse-midwife. Nurse-midwives have been practicing in the U.S. since the 1920s.&rdquo; according to the American College of Nurse Midwives.</p>
+
+<p id="CPMEX" style="display:none;">&ldquo;A Certified Professional Midwife (CPM) is a knowledgeable, skilled and professional independent midwifery practitioner who has met the standards for certification set by the North American Registry of Midwives (NARM) and is qualified to provide the Midwives Model of Care. The CPM is the only midwifery credential that requires knowledge about and experience in out-of-hospital settings,&rdquo; according to the North American Registry of Midwives.</p>
+</div>
+<!-- Numbers -->
+<!--
+<div class="Numbers">
+<p style="font-size:2em">There are approximately <span class="Count" style="font-size:4em">15000</span> practicing midwives in the United States.</p>
+</div>
+
+-->
+
+<section>
+<h2>LABOR PAINS IN THE LEGISLATURE</h2>
+
+<p>Home birth is becoming a more popular option across the country. The CDC says the rate of home births in the U.S. has increased 56 percent since 2004. In Illinois, the number of planned home births went up by almost 16 percent between 2010 and 2013.</p>
+&nbsp;
+
+<p>For legislators, the water is murky. There are studies that support midwife advocates&rsquo; position that home birth is a <a href="http://www.ncbi.nlm.nih.gov/pubmed/19624439">safe alternative</a> and the medical groups&rsquo; position that home births are <a href="http://www.webmd.com/baby/news/20140203/study-ties-home-births-to-higher-infant-death-rates">dangerous</a> for mothers and babies. According to lobbyist Dan Johnson, who worked with the Coalition for Midwifery, legislators &ldquo;like it when interest groups can work it out, so they don&rsquo;t have to pick sides.&rdquo;</p>
+&nbsp;
+
+<p>&ldquo;At the time there was a view that they were less inclined to reach an agreement and make concessions to the medical society&hellip;It wasn&rsquo;t happening, there wasn&rsquo;t any discussion, wasn&rsquo;t a conversation, wasn&rsquo;t a process of making concessions and finding common ground. The medical society didn&rsquo;t have a whole lot of interest in coming to an agreement,&rdquo; he said.</p>
+&nbsp;
+
+<p>The midwife groups also didn&rsquo;t want to compromise, according to Johnson</p>
+&nbsp;
+
+<p>&ldquo;They&rsquo;re passionate advocates. They believed they had a right to be licensed. If you have right, what&rsquo;s the point of settling in their perspective from the way things ought to be,&rdquo; he said.</p>
+&nbsp;
+
+<p>&ldquo;The medical societies, they block us every year. They say &lsquo;You need to compromise.&rsquo; Ok, give us some insight. We make compromises and they still say no,&rdquo; Carrie Vickery, a member of the board of directors for Illinois Friends of Midwives, said.</p>
+&nbsp;
+
+<p>According to Gabel, the medical groups &ldquo;don&rsquo;t like to be mandated.&rdquo;</p>
+&nbsp;
+
+<p>&ldquo;They say &lsquo;we don&rsquo;t want to do homebirth, but we don&rsquo;t want anyone else to do them either,&rsquo;&rdquo; she said.</p>
+&nbsp;
+
+<p>The AMA was not available to comment on this story. However, in 2008, the AMA&rsquo;s House of Delegates passed a resolution that said they would monitor state licensing legislation, work to limit midwives&rsquo; scope of practice and, &ldquo;support state legislation regarding appropriate physician and regulatory oversight of midwifery practice.&rdquo;</p>
+&nbsp;
+
+<p>In 30 years, only one CPM licensure law has gotten out of House Committee. It was defeated in the House 46-71.</p>
+&nbsp;
+
+<p>Twenty-eight states license certified professional midwives, including Wisconsin, Michigan and recently Indiana. Since 2010, four states have made a path for direct entry midwives to practice legally.</p>
+&nbsp;
+
+<p>Johnson thinks that the presence of major medical lobbies in Chicago may have created a culture that isn&rsquo;t open to alternative medical care. &ldquo;We&rsquo;re more culturally institutionalized in terms of licensure here. The bias is more toward the establishment when it comes to licensure,&rdquo; Johnson said.</p>
+&nbsp;
+
+<p>The Coalition for Illinois Midwifery is waiting for national licensing standards to come down from US Midwifery Education, Regulation, and Association before proposing another bill. In the meantime, ACOG and the American Academy of Pediatrics has slightly softened their stance on midwives, stating in 2013 that, while they still believe hospitals and birthing centers are the safest places to have a baby, they respect &ldquo;the right of women to make a medically informed decision about delivery.&rdquo;</p>
+</section>
+
+<div id="timeline"><!-- Timeline -->
+<h1 id="head" style="marign-top:5%">The history of CPM licensure legislation in Illinois</h1>
+
+<div class="cd-container" id="cd-timeline">
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-picture"><img alt="Picture" src="img/right_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>The first attempt</h2>
+
+<p>The first licensure bill for certified professional midwives, the Certified Professional Midwife Licensing Act, is submitted to committee but does not pass: &ldquo;This Act is intended to establish a licensing procedure for Certified Professional Midwives in Illinois.&rdquo; &ndash; The Certified Professional Midwife Licensing Act</p>
+<span class="cd-date">2001</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-picture"><img alt="Picture" src="img/left_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>Midwives brought to the table</h2>
+
+<p>A resolution to include midwives in discussion to solve OB/GYN crisis is adopted by the Senate:<br />
+<br />
+&ldquo;Mr. President and Ladies and Gentlemen of the Senate, I rise in strong support of this resolution. I -- I&rsquo;m married to a woman who had our five -- our last five children at home with a certified nurse midwife. It&rsquo;s a wonderful thing, a home birth, if people can do it.&rdquo; Sen. William Haine (D-56), in support of the resolution</p>
+<img height="200" src="img/William_Haine.jpg" width="auto" /> <span class="cd-date">2005</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-movie"><img alt="Movie" src="img/right_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>Fleeting victory</h2>
+
+<p>A midwifery licensure act passes the Senate 51-7, but dies in House committee:<br />
+<br />
+&ldquo;So how do you assure that when you don&rsquo;t select ahead of time which are going to be the troubled births from the routine births, how do you assure people that we&rsquo;re not going to have some disasters and we&rsquo;ll be responsible for those in passing legislation like this?&rdquo; Sen. Chris Lauzen (R-25)</p>
+<img height="200" src="img/Lauzen.jpg" width="auto" /> <span class="cd-date">2007</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-picture"><img alt="Picture" src="img/left_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>Documentary demystifies home birth</h2>
+
+<p>The &ldquo;Business of Being Born&rdquo; is released. The documentary is cited as bringing the idea of home birth into the mainstream.</p>
+<img height="200" src="img/Born.jpg" width="auto" /> <span class="cd-date">2008</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-movie"><img alt="Movie" src="img/right_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>AMA weighs in</h2>
+
+<p>The American Medical Association releases its Scope of Practice recommendation for midwives: &ldquo;Our AMA will: (1) only advocate in legislative and regulatory arenas for the licensing of midwives who are certified by the American College of Nurse-Midwives; (2) support state legislation regarding appropriate physician and regulatory oversight of midwifery practice, under the jurisdiction of state nursing and/or medical boards; (3) continue to monitor state legislative activities regarding the licensure and scope of practice of midwives; and (4) work with state medical societies and interested specialty societies to advocate in the interest of safeguarding maternal and neonatal health regarding the licensure and the scope of practice of midwives. (Res. 204, A-08)&rdquo;</p>
+<img height="200" src="img/AMA.jpg" width="auto" /> <span class="cd-date">2008</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-movie"><img alt="Movie" src="img/left_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>&quot;A hospital is the safest place&quot;</h2>
+
+<p>The American Congress of Obstetricians and Gynecologists releases a statement declaring that the safest place for a birth is in a hospital or a birthing center. They are reinforced by a resolution from the American Medical Association.</p>
+<span class="cd-date">2008</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-movie"><img alt="Movie" src="img/right_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>Defeated again</h2>
+
+<p>The Home Birth Safety Act, which would provide licensure of midwives and create the Illinois Midwifery Board, does not get out of committee:<br />
+<br />
+&ldquo;Dr. John Mason was a pioneer as it relates to nurse midwives being able to practice, had a nurse midwife in his practice who has delivered hundreds of babies. His commentary is as follows. He is a believer in midlevel providers. He believes in a hospital with the modern amenities, with appropriate backup. It&#39;s an extraordinarily good idea, particularly helpful in our rural areas, but this notion of no backup in the home he finds extraordinarily troubling.&rdquo; -- Sen. Chad Hays (R-104)</p>
+<span class="cd-date">2009</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-picture"><img alt="Picture" src="img/left_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>After 30 years, a House hearing</h2>
+
+<p>The Home Birth Safety Act passes out of the Health and Healthcare Disparities Committee, the first time a midwifery bill has passed out of House committee in 30 years. It is defeated in the House 71-46.</p>
+<span class="cd-date">2010</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-location"><img alt="Location" src="img/right_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>The Safe Transport Act</h2>
+
+<p>The Safe Transport Act, which would allow an illegal midwife to bring a woman to the hospital without being arrested, is introduced with the help of the Illinois Hospital Association. It does not pass out of committee.</p>
+<span class="cd-date">2011</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-location"><img alt="Location" src="img/left_footprint.png" /></div>
+<!-- cd-timeline-img -->
+
+<div class="cd-timeline-content">
+<h2>A buried bill</h2>
+
+<p>The midwife groups compromise with the medical lobby and submit a bill that limits the scope of certified professional midwives&rsquo; practice. The bill is currently in Rules.</p>
+<span class="cd-date">2013</span></div>
+<!-- cd-timeline-content --></div>
+<!-- cd-timeline-block --></div>
+<!-- cd-timeline --></div>
+<!-- JavaScript --><script src="https://code.jquery.com/jquery-1.11.3.js"></script><script src="js/parallax.js"></script><script src="http://d3js.org/d3.v3.min.js"></script><script src="http://d3js.org/topojson.v1.min.js"></script><script src="http://datamaps.github.io/scripts/datamaps.usa.min.js?v=1"></script><script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script><script src="js/jquery.counterup.min.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="js/main.js"></script><!-- Resource jQuery --><script type="text/javascript">
+	
+		$("#CNM").mouseover( function(){
+			$("#CNMEX").css("display","block");
+		} )
+		$("#CNM").mouseout( function(){
+			$("#CNMEX").css("display","none");
+		} )
+		$("#CPM").mouseover( function(){
+			$("#CPMEX").css("display","block");
+		} )
+		$("#CPM").mouseout( function(){
+			$("#CPMEX").css("display","none");
+		} )
+		;
+
+    var map = new Datamap({
+        scope: 'usa',
+        element: document.getElementById('container1'),
+        responsive: true,
+        fills: {
+            LEGAL: '#1c9099',
+            MIDDLE: '#a6bddb',
+            ILLEGAL: '#ece2f0'
+        },
+        data: {
+            "FL": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1995"
+            },
+            "IL": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not Yet"
+            },
+            "AZ": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1978"
+            },
+            "AK": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1998"
+            },
+            "AR": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1998"
+            },
+            "CA": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1993"
+            },
+            "CO": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1993"
+            },
+            "DE": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1978"
+            },
+            "ID": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2009"
+            },
+            "IN": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2013"
+            },
+            "LA": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1985"
+            },
+            "MN": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1999"
+            },
+            "MT": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1991"
+            },
+            "NH": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1979"
+            },
+            "NJ": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2002"
+            },
+            "NM": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1978"
+            },
+            "NY": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1992"
+            },
+            "OR": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1993"
+            },
+            "SC": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1976"
+            },
+            "TN": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2000"
+            },
+            "TX": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1983"
+            },
+            "UT": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2005"
+            },
+            "VT": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2000"
+            },
+            "VA": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2005"
+            },
+            "WA": {
+                fillKey: 'LEGAL',
+                numberOfThings: "1991"
+            },
+            "WI": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2006"
+            },
+            "WY": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2010"
+            },
+            "ME": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2008"
+            },
+            "MO": {
+                fillKey: 'LEGAL',
+                numberOfThings: "2007"
+            },
+            "AL": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "IA": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "MA": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "MD": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "MI": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "MS": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "NE": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "NC": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "OH": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "PA": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "PR": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "RI": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "SD": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "CT": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "DC": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "KY": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "ND": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "WV": {
+                fillKey: 'MIDDLE',
+                numberOfThings: "Not yet"
+            },
+            "GA": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            },
+            "GU": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            },
+            "HI": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            },
+            "KS": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            },
+            "NV": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            },
+            "OK": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            },
+            "VI": {
+                fillKey: 'ILLEGAL',
+                numberOfThings: "None"
+            }
+
+        },
+        geographyConfig: {
+            popupTemplate: function(geo, data) {
+                return ['<div class="hoverinfo"><strong>',
+                        ' Law enaced in ' + geo.properties.name,
+                        ': ' + data.numberOfThings,
+                        '</strong></div>'].join('');
+            }
+        }
+    });
+    	window.addEventListener('resize', function() {
+        map.resize();
+    });
+
+
+    // $( ".Count" ).scroll(function() {
+		  $('.Count').each(function () {
+		  var $this = $(this);
+		  jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+		    duration: 1000,
+		    easing: 'swing',
+		    step: function () {
+		      $this.text(Math.ceil(this.Counter));
+		    }
+		  });
+		});
+		// });
+	$(document).ready(function(){
+  		$('.parallax-window').parallax({imageSrc: 'img/mom.jpg'});
+  	});
+
+  	$(document).ready(function() {
+				var stickyNavTop = $('nav').offset().top;
+ 
+				var stickyNav = function(){
+				var scrollTop = $(window).scrollTop();
+      
+			if (scrollTop > stickyNavTop) { 
+    			$('nav').addClass('sticky');
+				} else {
+    				$('nav').removeClass('sticky'); 
+					}
+				};
+ 
+			stickyNav();
+ 
+			$(window).scroll(function() {
+ 	   		stickyNav();
+			});
+			});
+
+
+			$(document).ready(function(){
+				$('#menu').slicknav();
+				});
+
+		</script></body>
+</html>

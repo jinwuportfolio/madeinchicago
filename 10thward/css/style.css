@@ -1,0 +1,282 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #30343F;
+  background-color: #FAFAFF;
+  font-size: 90%;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+a {
+  color: #A30015;
+  text-decoration: none;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+.cd-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.cd-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-header #cd-logo {
+  float: left;
+  margin: 13px 0 0 5%;
+}
+.cd-header #cd-logo img {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .cd-header {
+    height: 70px;
+  }
+  .cd-header #cd-logo {
+    margin: 23px 0 0 5%;
+  }
+}
+
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-fixed-bg h1, .cd-fixed-bg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-family: 'Oswald', sans-serif;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 55px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("http://i.imgur.com/oSQQAgk.gif");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("http://i.imgur.com/Z39bSPx.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("http://i.imgur.com/OFhRHqa.jpg");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("http://i.imgur.com/lw8S2kc.jpg");
+}
+.cd-fixed-bg.cd-bg-5 {
+  background-image: url("http://i.imgur.com/NBK6xf6.jpg");
+}
+
+.cd-fixed-bg.cd-bg-6 {
+  background-image: url("http://i.imgur.com/e1gwjng.jpg");
+}
+
+
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 55px;
+  }
+}
+
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-1 {
+  background-color: #02111E;
+  color: #FAFAFF;
+}
+.cd-scrolling-bg.cd-color-2 {
+  background-color: #30343F;
+  color: #FAFAFF;
+}
+.cd-scrolling-bg.cd-color-3 {
+  background-color: #02111E;
+  color: #FAFAFF;
+}
+@media only screen and (min-width: 768px) {
+  .cd-scrolling-bg {
+    padding: 8em 0;
+    font-family: "Lato", sans-serif;
+    font-size: 95%;
+    line-height: 2;
+  }
+
+ /* Centered nav styling */
+
+body {
+  margin: 0;
+  }
+
+a {
+  text-decoration: none;
+  color: #F6FFFF;
+  font-size: 1.2em;
+  }
+a:hover {
+  color: #343436;
+  font-weight: 500;
+  text-decoration: none;
+  }
+
+nav {
+  background-color: #B3DDF2;
+  height: 6em;
+  margin: 0 auto;
+  width: 100%;
+  }
+
+nav ul {
+  text-align: center;
+  margin: 0;
+  padding-left: 0;
+  }
+nav li {
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: 'Lato', sans-serif;
+  }
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+    font-size: 1em;
+    }
+
+#mobileNav {
+  display: none;
+  }
+.slickNav_menu {
+  display: none;
+  }
+
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+    }
+  #nonmobileNav {
+    display: none;
+    }
+  .slickNav_menu {
+    display: block;
+    background-color: #B3DDF2;
+    }
+  .slickNav_btn {
+    background-color: #be170e;
+    }
+  }
+
+  .drop {
+float: left;
+color: #A30015;
+line-height: 92%;
+padding-right: .3%;
+font-size: 40px;
+font-family: 'Oswald';
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}

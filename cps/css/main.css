@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Lobster', cursive;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+section img {
+  width:100%;
+}
+
+.container {
+  width:60%;
+  margin-bottom: 3%;
+}
+
+#byline {
+  text-align: center;
+  font-style: italic;
+}
+
+article {
+  padding:3%;
+  background-color: #ededed;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width:85%;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+}

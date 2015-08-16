@@ -1,0 +1,653 @@
+<html>
+<html lang="en">
+
+<head>
+<title>Violin-Making Tunes A Global Beat From Chicago</title>
+<link href='//cdn.knightlab.com/libs/soundcite/latest/css/player.css' rel='stylesheet' type='text/css'><script type='text/javascript' src='//cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js'></script>
+
+	<!-- css -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+ <link rel="stylesheet" type="text/css" href="css/demo.css" />
+ <link rel="stylesheet" type="text/css" href="css/layout-multi.css" />
+
+ <!-- nav -->
+	<link rel="stylesheet" href="css/slicknav.css" />
+	<link href="css/nav.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	
+
+	<!-- Scripts -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.js"></script>
+
+	<!-- nav -->
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<!-- side -->
+	<script type="text/javascript" src="js/jscript.js"></script>
+	<script src="js/main.js"></script> <!-- Gem jQuery -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+<style type="text/css">
+html body {
+	width:100%;
+	margin: 0;
+}
+
+
+#headline {
+	width:100%;
+}
+
+#headline-text {
+	position: relative;
+	margin-top: 3%;
+	/*z-index:100;*/
+	color:white;
+	margin-left: 2%;
+}
+
+#feature-photo {
+	z-index:-100;
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:auto;
+	width:auto;
+	overflow:hidden;
+	/*width: 100%;
+	height: 100%;*/
+}
+
+#feature-photo img{
+	width: 100%;
+	height: 100%;
+}
+
+#title {
+	font-family: "Bauru",serif;
+	font-weight: 200;
+	font-size: 5em;
+}
+
+#video {
+	text-align: center;
+}
+
+#page1 {
+	width:100%;
+	height:100%;
+}
+
+#page2 {
+	width:100%;
+	height: 100%;
+	margin:0 0 0 0;
+	height: 100%;
+}
+
+#summary {
+	/*z-index:100;*/
+	color:black;
+	padding-left: 10%;
+/*	padding-right: 5%;*/
+	padding-bottom: 5%;
+	width:90%;
+}
+
+#summary p {
+	font-size: 1.2em;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
+	width: 90%;
+	padding-left: 16%;
+
+}
+
+#page3 {
+	width:100%;
+	height: auto;thumb-na
+}
+
+#page4 {
+	width:100%;
+	height: 100%;
+	margin-left: 2%;
+}
+
+#lead {
+	font-size:1.3em;
+	background-image: url("images/1.png");
+	opacity:0.5;
+	width:100%;
+	height:800px;
+	top:0px;
+	z-index: 1;
+}
+
+#lead p {
+	color: white;
+	margin-left: 10%;
+	margin-right: 10%;
+	opacity:1;
+	z-index: 100;
+}
+
+#maker-1 {
+	float: right;
+	width:100%;
+	border-radius: 20px;
+}
+
+#maker-2 {
+	float: right;
+	width:100%;
+	border-radius: 20px;
+}
+
+#sidebar {
+	float: right;
+	width:25%;
+	border-radius: 10px;
+	height: 100%;
+	margin-top: 5%;
+	margin-right: 2%;
+	background-color: #B3DDF2;
+	padding: 2% 2% 2% 2%;
+}
+
+#main-body {
+	width:100%;
+	margin-bottom: 4%;
+}
+
+p {
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
+}
+
+hr { 
+    display: block;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+    width: 60%;
+}
+
+.thumb-nav {
+	z-index:100;
+}
+
+#violin {
+	width: 20%;
+	float: left;
+	margin-bottom: 3%;
+}
+
+#viola {
+	width: 20%;
+	float: left;
+	margin-left: 3%;
+	margin-bottom: 3%;
+}
+
+#cello {
+	width: 20%;
+	float:left;
+	margin-left: 5%;
+	margin-bottom: 3%;
+}
+
+#bass {
+	width: 20%;
+	float: left;
+	margin-left: 8%;
+	margin-bottom: 3%;
+}
+
+#illustration {
+	width: 60%;
+	float: left;
+}
+
+.slides {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+	}
+	.slides * {
+	    user-select: none;
+	    -ms-user-select: none;
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -webkit-user-select: none;
+	    -webkit-touch-callout: none;
+	}
+	.slides input { display: none; }
+	.slide-container { display: block; }
+	.slide {
+	    top: 0;
+	    opacity: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: block;
+	    position: absolute;
+	    transform: scale(0);
+	    transition: all .7s ease-in-out;
+	}
+	.slide img {
+	    width: 100%;
+	    height: 100%;
+	}
+	.nav label {
+	    width: 200px;
+	    height: 100%;
+	    display: none;
+	    position: absolute;
+		opacity: 0;
+	    z-index: 9;
+	    cursor: pointer;
+	    transition: opacity .2s;
+	    color: #FFF;
+	    font-size: 156pt;
+	    text-align: center;
+	    line-height: 380px;
+	    font-family: "Varela Round", sans-serif;
+	    background-color: rgba(255, 255, 255, .3);
+	    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+	}
+	.slide:hover + .nav label { opacity: 0.5; }
+	.nav label:hover { opacity: 1; }
+	.nav .next { right: 0; }
+	input:checked + .slide-container  .slide {
+	    opacity: 1;
+	    transform: scale(1);
+	    transition: opacity 1s ease-in-out;
+	}
+	input:checked + .slide-container .nav label { display: block; }
+	.nav-dots {
+		width: 100%;
+		bottom: 9px;
+		height: 11px;
+		display: block;
+		position: absolute;
+		text-align: center;
+	}
+	.nav-dots .nav-dot {
+		top: -5px;
+		width: 11px;
+		height: 11px;
+		margin: 0 4px;
+		position: relative;
+		border-radius: 100%;
+		display: inline-block;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.nav-dots .nav-dot:hover {
+		cursor: pointer;
+		background-color: rgba(0, 0, 0, 1);
+	}
+	input#img-1:checked ~ .nav-dots label#img-dot-1,
+	input#img-2:checked ~ .nav-dots label#img-dot-2,
+	input#img-3:checked ~ .nav-dots label#img-dot-3,
+	input#img-4:checked ~ .nav-dots label#img-dot-4,
+	input#img-5:checked ~ .nav-dots label#img-dot-5,
+	input#img-6:checked ~ .nav-dots label#img-dot-6,
+	input#img-7:checked ~ .nav-dots label#img-dot-7 {
+		background: rgba(0, 0, 0, 0.8);
+}
+
+/* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+</style>
+
+
+
+	<script type="text/javascript">
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+
+// nav
+$(document).ready(function() {
+				var stickyNavTop = $('nav').offset().top;
+ 
+				var stickyNav = function(){
+				var scrollTop = $(window).scrollTop();
+      
+			if (scrollTop > stickyNavTop) { 
+    			$('nav').addClass('sticky');
+				} else {
+    				$('nav').removeClass('sticky'); 
+					}
+				};
+ 
+			stickyNav();
+ 
+			$(window).scroll(function() {
+ 	   		stickyNav();
+			});
+			});
+
+$(document).ready(function(){
+				$('#menu').slicknav();
+				});
+
+
+</script>
+</head>
+<body>
+
+<header>
+		<nav id="nonmobileNav">
+			<ul>
+				<li>
+					<a href="http://www.medillnews847.com/madeinchicago/malort/index.html">Previous Story</a>
+				</li>
+				<li>
+					<a href="http://www.medillnews847.com/madeinchicago" class="logo">
+						<img src="images/logo-01.png" alt="logo" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.medillnews847.com/madeinchicago/ysvp/index.html">Next Story</a>
+				</li>
+			</ul>
+		</nav>
+		<nav id="mobileNav">
+			<ul id="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Next Story</a></li>
+				<li><a href="#">Previous Story</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="page1">
+	<div class="thumb-nav">
+			
+			<a class="thumb-nav__item" href="#" onclick="return show('page2','page1');"><img src="images/thumb2.png" alt="thumb02" /><span style="font-size:0.7em;">Text</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page3','page1');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Video</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page4','page1');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Slideshow</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page5','page1');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Learn More</span></a>
+		</div>
+
+	<div id="headline">
+	<div id="feature-photo">
+	<img src="images/violin2.jpg">
+	</div>
+
+	<div id="headline-text">
+	<h1 id="title">Violin-Making</br>Tunes A Global Beat</br>From Chicago</h1>
+	<p>Video/Text by Siyuan(Bonnie) Du</p>
+	<p>Produced by Jin Wu</p>
+	</div>
+	</div>
+</div>
+
+<div id="page2" style="display:none">
+	<div class="thumb-nav">
+			<a class="thumb-nav__item" href="#" onclick="return show('page1','page2');"><img src="images/thumb1.png" alt="thumb01" /><span style="font-size:0.7em;">Home</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page3','page2');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Video</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page4','page2');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Slideshow</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page5','page2');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Learn More</span></a>
+		</div>
+
+		<div id="gap" style="height:5%;"></div>
+		<div id="summary">
+		<p>Chicago &mdash; hub for the blues and jazz &mdash; tunes the hearts of violinists as well.</p> 
+
+<p>As a center of musical instruments making for generations, Chicago continues to cultivate the crafting of stringed musical instruments at businesses that serve the globe with their diversely of techniques, traditions and culture.</p>
+
+<p>"My father was very scientifically oriented and our violins are strictly consistent," said Paul Becker. "We've always worked on Wabash Avenue, which was known as 'music row'."</p> 
+
+<p>The Becker family, whose instruments making tradition began in the 1800s on Wabash Avenue, is one of the oldest companies in Chicago. In 1968 Carl G. Becker and his son, Carl F. Becker, formed their own company in Chicago: Carl Becker & Son.</p>
+
+<p>Paul Becker, president of Becker & Son Ltd., learned the craft when he was 14 from his father, Carl F. Becker, and grandfather, Carl G. Becker. And he is currently training his youngest daughter, Vada Becker, in violin making and restoration.</p>
+<hr>
+<div>
+<img name="maker-2" src="images/jeremy.JPG" id="maker-2" alt="" />
+
+<span class="soundcite" data-id="208844390" data-start="0" data-end="61000" data-plays="1">Click to hear the music from an Carl Becker & Son's violin</span>
+</div></br></br>
+<hr>
+
+<p>Nearly a century ago, the area on Wabash between Adams and Van Buren in the Loop used to be known as "Music Row," where many manufacturers of musical instruments located, including Lyon & Healy, Carl Fischer Music and W.W. Kimball.</p>
+
+<p>Musicians playing for symphony orchestras across the world depend on Carl Becker's instruments because of their bright, unique sound.</p>
+
+<p>"People travel from all over the world to come to see me just to adjust their instruments," Paul Becker said.</p>
+
+<p>Gary Stucka, cellist with Chicago Symphony Orchestra, plays a Carl Becker violin from 1918. "I think there is a wonderful history here, and it's continued," Stucka said.</p>
+
+<p>Chicago's string music&ndash;making legacies continue but younger brands such as Seman Violins flourish too.</p> 
+
+<p>Peter Seman, owner of Seman Violins in Skokie and president of American Federation of Violin and Bow Makers, has been serving greater Chicago area for more than 20 years.</p>
+
+<p>"I will never retire," Seman said. "Even if I cut back my hours, I will still keep building as long as I physically can."</p>
+
+<p>Seman usually makes three or four instruments a year, because he has to deal with paper work and reception instead of building full time. "If I work strictly, I can make a violin in about a month," he said.</p>
+<hr>
+<img name="maker-1" src="images/seman.JPG" id="maker-1" alt="" />
+<span class="soundcite" data-id="208844458" data-start="0" data-end="32000" data-plays="1">Click to hear the music from an Seman's violin</span>
+<hr>
+
+<p>The store closes every Wednesday, when Seman stays in his secret room building instruments by himself.</p>  
+
+<p>Originally from New York, Seman moved to Chicago to attend School of Violin Making.</p> 
+
+<p>"One is in Salt Lake City, the other is in Chicago. Those are the two major schools of violin making in the US," Seman said. "I visited the city and I like it."</p>
+
+<p>Eight craftsman make instruments in his workshop, and six of them including Seman graduated from the same school.</p>
+
+<p>Chicago School of Violin Making in Skokie offers a full&ndash;time, three&ndash;year program to an international student range. "Originally founded as the Kenneth Warren & Son School of Violin Making in 1975, the school has been under the direction of Master Violin Maker Tschu Ho Lee since its inception," according to the school website.</p>
+
+<p>"We right now have students from all of the U.S.," said Rebecca Elliott, co&ndash;director of Chicago School of Violin Making. "And we have students from Sweden, China and Korea. In September we'll get a student from Ecuador."</p>
+
+<p>The school went non&ndash;for&ndash;profit in December 2002 to ensure the continuity and high standard of the program.</p>
+
+<p>"Chicago is unique in the respect that big shops cooperate," Paul Becker said. "We are not trying to step each other in the back to promote our own firms."</p>
+
+	</div>
+</div>
+
+<div id="page3" style="display:none">
+	<div class="thumb-nav">
+			<a class="thumb-nav__item" href="#" onclick="return show('page1','page3');"><img src="images/thumb1.png" alt="thumb01" /><span style="font-size:0.7em;">Home</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page2','page3');"><img src="images/thumb2.png" alt="thumb02" /><span style="font-size:0.7em;">Text</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page4','page3');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Slideshow</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page5','page3');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Learn More</span></a>
+		</div>
+	<div id="video">
+	<iframe src="https://player.vimeo.com/video/129781151?title=0&byline=0&portrait=0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+	</div>
+</div>
+
+<div id="page4" style="display:none">
+	<div class="thumb-nav">
+			<a class="thumb-nav__item" href="#" onclick="return show('page1','page4');"><img src="images/thumb1.png" alt="thumb01" /><span style="font-size:0.7em;">Home</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page2','page4');"><img src="images/thumb2.png" alt="thumb02" /><span style="font-size:0.7em;">Text</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page3','page4');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Video</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page5','page4');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Learn More</span></a>
+		</div>
+<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+		<div class="slide">
+			<img src="images/1.png" />
+<figcaption>Facilities inside Seman's Violin, a Chicago-based violin maker. (Jin Wu/Medill)</figcaption>
+        </div>
+		<div class="nav">
+			<label for="img-6" class="prev">&#x2039;</label>
+			<label for="img-2" class="next">&#x203a;</label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/2.png" />
+<figcaption>Employee of Seman's Violin, a Chicago-based violin maker, is making violin in the workshop. (Jin Wu/Medill)</figcaption>
+        </div>
+		<div class="nav">
+			<label for="img-1" class="prev">&#x2039;</label>
+			<label for="img-3" class="next">&#x203a;</label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/3.png" />
+<figcaption>Employee at Seman's Violin is removing the back to the ribs by using spool clamps and C clamps with pads at the upper and lower blocks. (Jin Wu/Medill)
+        </div>
+		<div class="nav">
+			<label for="img-2" class="prev">&#x2039;</label>
+			<label for="img-4" class="next">&#x203a;</label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/4.png" />
+<figcaption>Employee of Seman's Violin, a Chicago-based violin maker, is making sure the violin meets the required size. (Jin Wu/Medill)</figcaption>
+        </div>
+		<div class="nav">
+			<label for="img-3" class="prev">&#x2039;</label>
+			<label for="img-5" class="next">&#x203a;</label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/8.png" />
+<figcaption>Employee of Seman's Violin, a Chicago-based violin maker, is examing if the violin are precisely made. (Jin Wu/Medill)</figcaption>
+        </div>
+		<div class="nav">
+			<label for="img-4" class="prev">&#x2039;</label>
+			<label for="img-6" class="next">&#x203a;</label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/6.png" />
+<figcaption>Employee of Seman's Violin, is carving the front and back plates of a violin. (Jin Wu/Medill)</figcaption>
+        </div>
+		<div class="nav">
+			<label for="img-5" class="prev">&#x2039;</label>
+			<label for="img-7" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-7" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/7.png" />
+<figcaption>Employee of Seman's Violin, is carving the neck of a violin. (Jin Wu/Medill)</figcaption>
+        </div>
+		<div class="nav">
+			<label for="img-6" class="prev">&#x2039;</label>
+			<label for="img-1" class="next">&#x203a;</label>
+		</div>
+    </li>
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+      <label for="img-7" class="nav-dot" id="img-dot-7"></label>
+    </li>
+</ul>
+</div>
+
+<div id="page5" style="display:none;background-color:black;">
+	<div id="illustration">
+		<div class="thumb-nav">
+			<a class="thumb-nav__item" href="#" onclick="return show('page1','page5');"><img src="images/thumb1.png" alt="thumb01" /><span style="font-size:0.7em;">Home</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page2','page5');"><img src="images/thumb2.png" alt="thumb02" /><span style="font-size:0.7em;">Text</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page3','page5');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Video</span></a>
+			<a class="thumb-nav__item" href="#" onclick="return show('page4','page5');"><img src="images/thumb3.png" alt="thumb03" /><span style="font-size:0.7em;">Slideshow</span></a>
+
+		</div>
+	<div id="violin">
+		<img id="violinimage" style="max-height:700px;" src="images/violin.png">
+		<span class="soundcite" data-id="208845998" data-start="0" data-end="20690" data-plays="1">Listen</span>
+			
+	</div>
+
+	<div id="viola">
+		<img id="violinimage" style="max-height:700px;" src="images/viola.png">
+		<span class="soundcite" data-id="208845965" data-start="0" data-end="25445" data-plays="1">Listen</span>
+	</div>
+
+	<div id="cello">
+		<img src="images/cello.png" style="max-height:700px;">
+			<span class="soundcite" data-id="208845945" data-start="0" data-end="39813" data-plays="1">Listen</span>
+	</div>
+						
+	<div id="bass">				
+		<img src="images/bass.png" style="max-height:700px;">
+			<span class="soundcite" data-id="208845917" data-start="0" data-end="58258" data-plays="1">Listen</span>
+	</div>	
+	</div>
+
+	<div id="sidebar">
+		<h2 style="text-align:center;">Violin Family</h2>
+
+		<p>The violin family of musical instruments was developed in Italy in the 16th century. The standard modern violin family consists of the violin, viola, cello, and double bass, playing different ranges.</p>
+
+		<p><strong><span style="color:white;font-size:1.3em;">Violin </span></strong>is the smallest, and the highest in pitch. It plays the soprano range and is typically made in one adult size.</p>
+
+		<p><strong><span style="color:white;font-size:1.3em;">Viola </span></strong>has lower strings, with a body that is marginally bigger than violin to support the sound of the lower strings. It plays the alto range. Viola is made in a range of sizes to suit the size of the player.</p>
+
+
+		<p><strong><span style="color:white;font-size:1.3em;">Cello </span></strong>(aka violoncello) has a fuller and heavier tone. It is much larger than the viola and must be played while sitting with the instrument betwee the knees. It plays the baraton range. Cellos are made of various sizes.</p>
+		<p><strong><span style="color:white;font-size:1.3em;">Double Bass </span></strong> has a even larger size. Most double basses have four strings, though three-string basses were common in the 19th century, and five-string basses are now used by some players.  Double basses play the bass range and are also made of various sizes.</p>
+
+	</div>	
+	</div>
+
+</body>
+</html>
